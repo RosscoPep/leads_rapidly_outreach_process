@@ -1,0 +1,248 @@
+# Persona Mapping Configuration
+
+# File Paths
+files:
+  input:
+    name: "input/categorized_personas.xlsx"
+    sheet: "Sheet1"
+  output:
+    name: "processed_leads.xlsx"
+    directory: "output"
+  log:
+    name: "icebreaker_generation.log"
+  linkedin_posts:
+    directory: "input/LI_post_activity"
+    name: "result (20).csv"
+    sheet: "result (20)"
+    key_column_li_df: "profileUrl"
+    content_column: "postContent"
+    timestamp_column: "postTimestamp"
+    key_column_main_df: "linkedinProfileUrl"
+    max_posts_per_person: 2
+    max_post_age_days: 60
+
+# Runtime settings
+runtime:
+  test_mode: false         # If true, only process a limited number of rows
+  max_test_rows: 9        # Number of rows to process in test mode
+  dry_run: false           # If true, don't make actual API calls (mock data)
+  future_timeout: 180     # Maximum time in seconds to wait for a future
+  consecutive_error_threshold: 10   # Stop after this many consecutive errors
+  error_percentage_threshold: 20    # Stop if error percentage exceeds this value (0-100)
+
+gemini:
+  model_name: "gemini-2.0-flash"
+  api_url: "https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent"
+  requests_per_minute: 15 #15 for 2.0
+  max_workers: 1 #5
+  safety_settings:
+    - category: "HARM_CATEGORY_HARASSMENT"
+      threshold: "BLOCK_MEDIUM_AND_ABOVE"
+    - category: "HARM_CATEGORY_HATE_SPEECH"
+      threshold: "BLOCK_MEDIUM_AND_ABOVE"
+    - category: "HARM_CATEGORY_SEXUALLY_EXPLICIT"
+      threshold: "BLOCK_MEDIUM_AND_ABOVE"
+    - category: "HARM_CATEGORY_DANGEROUS_CONTENT"
+      threshold: "BLOCK_MEDIUM_AND_ABOVE"
+  generation_config:
+    temperature: 0.72
+    topP: 0.95
+    topK: 40
+    candidateCount: 1
+
+persona_guidance:
+  "The Scaler": "Focus on growth challenges and scaling operations. Use future-oriented language about managing expansion efficiently."
+  "The Cost Cutter/Optimizer": "Highlight efficiency, automation, and measurable results. Be direct and data-focused in tone."
+  "The Innovator/Builder": "Emphasize cutting-edge approaches and possibilities. Use language of discovery and breakthrough thinking."
+  "The Risk Mitigator": "Focus on security, compliance, and risk reduction. Use measured, careful language with emphasis on stability."
+  "Innovator/Trendsetter": "Use forward-thinking language, discuss emerging trends. Tone should be visionary and possibility-focused."
+  "Pragmatist/Problem-Solver": "Be practical and specific. Focus on tangible solutions to concrete problems they're likely facing."
+  "Business Outcomes Driver": "Emphasize ROI and tangible business impact. Use metrics-oriented language and business terminology."
+  "People/Culture Advocate": "Focus on team impact and organizational culture benefits. Use collaborative, human-centered language."
+  "Technical Implementer": "Be specific and technically relevant. Use precise language focused on implementation and technical validity."
+  "Strategic Leader": "Focus on big picture and competitive advantage. Use executive-level language about strategic outcomes."
+  "Operational Manager": "Emphasize process improvement and operational excellence. Use language about consistency and reliability."
+  "Growth Driver": "Focus on market opportunity and competitive advantage. Use dynamic language about results and differentiation."
+  "General Professional": "Use balanced professional tone. Focus on broadly relevant benefits across both tactical and strategic levels."
+
+# Persona Categories
+personas:
+  problem_goal_orientation:
+    The Scaler:
+      description: "Focuses on managing rapid growth, scaling systems/teams. Triggered by recent large funding, market expansion news, rapid hiring."
+      triggers:
+        - "recent large funding"
+        - "market expansion news"
+        - "rapid hiring"
+    The Cost Cutter/Optimizer:
+      description: "Prioritizes efficiency, ROI, reducing waste, automation. Triggered by operational roles, industry pressures, specific efficiency mentions."
+      triggers:
+        - "operational roles"
+        - "industry pressures"
+        - "efficiency mentions"
+    The Innovator/Builder:
+      description: "Drives new product development, R&D, entering new markets. Triggered by product launch news, R&D roles, strategic pushes into new areas."
+      triggers:
+        - "product launch news"
+        - "R&D roles"
+        - "strategic pushes"
+    The Risk Mitigator:
+      description: "Concerned with security, compliance, stability, regulations. Triggered by security/compliance roles, regulatory news, industry breaches."
+      triggers:
+        - "security/compliance roles"
+        - "regulatory news"
+        - "industry breaches"
+
+  communication_focus:
+    Innovator/Trendsetter:
+      description: "Discusses future tech, disruption, new ideas, thought leadership. Prefers novelty, vision."
+      preferences:
+        - "novelty"
+        - "vision"
+    Pragmatist/Problem-Solver:
+      description: "Focuses on practical application, technical details, efficiency gains, 'how-to'. Prefers data, tangible benefits."
+      preferences:
+        - "data"
+        - "tangible benefits"
+    Business Outcomes Driver:
+      description: "Highlights ROI, market strategy, customer impact, financial results. Prefers value proposition, metrics."
+      preferences:
+        - "value proposition"
+        - "metrics"
+    People/Culture Advocate:
+      description: "Emphasizes team dynamics, leadership, company values, collaboration. Prefers partnership, shared values."
+      preferences:
+        - "partnership"
+        - "shared values"
+
+  role_based_archetype:
+    Technical Implementer:
+      description: "Hands-on technical role (Engineer, Developer, DevOps). Values specifics, efficiency, technical validity."
+      values:
+        - "specifics"
+        - "efficiency"
+        - "technical validity"
+    Strategic Leader:
+      description: "High-level decision maker (VP, C-Suite, Director). Values outcomes, ROI, strategic alignment, concise summaries."
+      values:
+        - "outcomes"
+        - "ROI"
+        - "strategic alignment"
+    Operational Manager:
+      description: "Focuses on process, reliability, project execution (Ops Mgr, Project Mgr). Values stability, predictability, cost savings."
+      values:
+        - "stability"
+        - "predictability"
+        - "cost savings"
+    Growth Driver:
+      description: "Focused on revenue, market share, customer acquisition (Sales, Marketing). Values results, differentiation, speed."
+      values:
+        - "results"
+        - "differentiation"
+        - "speed"
+
+  default:
+    General Professional:
+      description: "Default category when specific signals for other personas are weak or conflicting."
+      conditions:
+        - "weak signals"
+        - "conflicting signals"
+
+# Industry Mappings
+industries:
+  tech:
+    - "Software"
+    - "SaaS"
+    - "Cloud Computing"
+    - "Artificial Intelligence"
+    - "Cybersecurity"
+    - "FinTech"
+    - "EdTech"
+    - "HealthTech"
+  
+  finance:
+    - "Banking"
+    - "Investment"
+    - "Insurance"
+    - "Financial Services"
+    - "Accounting"
+  
+  healthcare:
+    - "Healthcare"
+    - "Pharmaceutical"
+    - "Medical Devices"
+    - "Biotechnology"
+  
+  manufacturing:
+    - "Manufacturing"
+    - "Industrial"
+    - "Automotive"
+    - "Aerospace"
+    - "Construction"
+
+# Seniority Levels
+seniority:
+  junior:
+    keywords:
+      - "Junior"
+      - "Associate"
+      - "Entry Level"
+      - "Trainee"
+    experience_years: "0-3"
+  
+  mid_level:
+    keywords:
+      - "Mid"
+      - "Senior"
+      - "Lead"
+      - "Specialist"
+    experience_years: "3-7"
+  
+  senior:
+    keywords:
+      - "Senior"
+      - "Lead"
+      - "Principal"
+      - "Manager"
+    experience_years: "7-12"
+  
+  executive:
+    keywords:
+      - "Director"
+      - "VP"
+      - "C-Level"
+      - "Head of"
+    experience_years: "12+"
+
+# Company Stages
+company_stages:
+  startup:
+    keywords:
+      - "Seed"
+      - "Series A"
+      - "Early Stage"
+      - "Startup"
+    employee_range: "1-50"
+  
+  scale_up:
+    keywords:
+      - "Series B"
+      - "Series C"
+      - "Growth"
+      - "Scale-up"
+    employee_range: "51-500"
+  
+  established:
+    keywords:
+      - "Established"
+      - "Mature"
+      - "Enterprise"
+    employee_range: "501-5000"
+  
+  large_enterprise:
+    keywords:
+      - "Large"
+      - "Enterprise"
+      - "Fortune 500"
+    employee_range: "5000+"
+

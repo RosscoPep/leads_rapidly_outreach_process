@@ -1,0 +1,229 @@
+# Persona Mapping Configuration
+
+# File Paths
+paths:
+  input:
+    excel: "input/websearch/Ross_leads_rapidly_SW_1450_CLEAN_final_results.xlsx"
+    posts_excel: "input/posts/posts_data.xlsx"
+    sheet_name: "RawDataResults"
+  output:
+    excel: "output/categorized_personas.xlsx"
+    log: "persona_categorization.log"
+
+# OpenAI Configuration
+openai:
+  model: "gpt-4.1-mini"
+  api_key_env: "OPENAI_API_KEY"
+  max_retries: 3
+  retry_delay_seconds: 5
+  temperature: 0.3
+  max_tokens: 200
+
+# Persona Categories
+personas:
+  problem_goal_orientation:
+    The Scaler:
+      description: "Focuses on managing rapid growth, scaling systems/teams. Triggered by recent large funding, market expansion news, rapid hiring."
+      triggers:
+        - "recent large funding"
+        - "market expansion news"
+        - "rapid hiring"
+    The Cost Cutter/Optimizer:
+      description: "Prioritizes efficiency, ROI, reducing waste, automation. Triggered by operational roles, industry pressures, specific efficiency mentions."
+      triggers:
+        - "operational roles"
+        - "industry pressures"
+        - "efficiency mentions"
+    The Innovator/Builder:
+      description: "Drives new product development, R&D, entering new markets. Triggered by product launch news, R&D roles, strategic pushes into new areas."
+      triggers:
+        - "product launch news"
+        - "R&D roles"
+        - "strategic pushes"
+    The Risk Mitigator:
+      description: "Concerned with security, compliance, stability, regulations. Triggered by security/compliance roles, regulatory news, industry breaches."
+      triggers:
+        - "security/compliance roles"
+        - "regulatory news"
+        - "industry breaches"
+
+  communication_focus:
+    Innovator/Trendsetter:
+      description: "Discusses future tech, disruption, new ideas, thought leadership. Prefers novelty, vision."
+      preferences:
+        - "novelty"
+        - "vision"
+    Pragmatist/Problem-Solver:
+      description: "Focuses on practical application, technical details, efficiency gains, 'how-to'. Prefers data, tangible benefits."
+      preferences:
+        - "data"
+        - "tangible benefits"
+    Business Outcomes Driver:
+      description: "Highlights ROI, market strategy, customer impact, financial results. Prefers value proposition, metrics."
+      preferences:
+        - "value proposition"
+        - "metrics"
+    People/Culture Advocate:
+      description: "Emphasizes team dynamics, leadership, company values, collaboration. Prefers partnership, shared values."
+      preferences:
+        - "partnership"
+        - "shared values"
+
+  role_based_archetype:
+    Technical Implementer:
+      description: "Hands-on technical role (Engineer, Developer, DevOps). Values specifics, efficiency, technical validity."
+      values:
+        - "specifics"
+        - "efficiency"
+        - "technical validity"
+    Strategic Leader:
+      description: "High-level decision maker (VP, C-Suite, Director). Values outcomes, ROI, strategic alignment, concise summaries."
+      values:
+        - "outcomes"
+        - "ROI"
+        - "strategic alignment"
+    Operational Manager:
+      description: "Focuses on process, reliability, project execution (Ops Mgr, Project Mgr). Values stability, predictability, cost savings."
+      values:
+        - "stability"
+        - "predictability"
+        - "cost savings"
+    Growth Driver:
+      description: "Focused on revenue, market share, customer acquisition (Sales, Marketing). Values results, differentiation, speed."
+      values:
+        - "results"
+        - "differentiation"
+        - "speed"
+
+  default:
+    General Professional:
+      description: "Default category when specific signals for other personas are weak or conflicting."
+      conditions:
+        - "weak signals"
+        - "conflicting signals"
+
+# Industry Mappings
+industries:
+  tech:
+    - "Software"
+    - "SaaS"
+    - "Cloud Computing"
+    - "Artificial Intelligence"
+    - "Cybersecurity"
+    - "FinTech"
+    - "EdTech"
+    - "HealthTech"
+  
+  finance:
+    - "Banking"
+    - "Investment"
+    - "Insurance"
+    - "Financial Services"
+    - "Accounting"
+  
+  healthcare:
+    - "Healthcare"
+    - "Pharmaceutical"
+    - "Medical Devices"
+    - "Biotechnology"
+  
+  manufacturing:
+    - "Manufacturing"
+    - "Industrial"
+    - "Automotive"
+    - "Aerospace"
+    - "Construction"
+
+# Seniority Levels
+seniority:
+  junior:
+    keywords:
+      - "Junior"
+      - "Associate"
+      - "Entry Level"
+      - "Trainee"
+    experience_years: "0-3"
+  
+  mid_level:
+    keywords:
+      - "Mid"
+      - "Senior"
+      - "Lead"
+      - "Specialist"
+    experience_years: "3-7"
+  
+  senior:
+    keywords:
+      - "Senior"
+      - "Lead"
+      - "Principal"
+      - "Manager"
+    experience_years: "7-12"
+  
+  executive:
+    keywords:
+      - "Director"
+      - "VP"
+      - "C-Level"
+      - "Head of"
+    experience_years: "12+"
+
+# Company Stages
+company_stages:
+  startup:
+    keywords:
+      - "Seed"
+      - "Series A"
+      - "Early Stage"
+      - "Startup"
+    employee_range: "1-50"
+  
+  scale_up:
+    keywords:
+      - "Series B"
+      - "Series C"
+      - "Growth"
+      - "Scale-up"
+    employee_range: "51-500"
+  
+  established:
+    keywords:
+      - "Established"
+      - "Mature"
+      - "Enterprise"
+    employee_range: "501-5000"
+  
+  large_enterprise:
+    keywords:
+      - "Large"
+      - "Enterprise"
+      - "Fortune 500"
+    employee_range: "5000+"
+
+# Mapping Rules
+rules:
+  confidence_threshold: 0.7
+  minimum_evidence_points: 2
+  allow_multiple_personas: false
+  prioritize_recent_activity: true
+  consider_company_stage: true
+  prioritization_logic:
+    - "Problem/Goal Orientation"
+    - "Communication Focus"
+    - "Role-Based Archetype"
+    - "Default"
+
+# Output Settings
+output:
+  format: "excel"
+  include_confidence_scores: true
+  include_evidence: true
+  include_recommendations: true
+  custom_fields: []
+  
+# Processing Settings
+processing:
+  batch_size: 100
+  max_retries: 3
+  timeout_seconds: 300
+  cache_results: true 

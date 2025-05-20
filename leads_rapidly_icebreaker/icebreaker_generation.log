@@ -1,0 +1,1439 @@
+2025-05-15 17:56:53,131 - INFO - MainThread - --- Starting Gemini Personalization Script ---
+2025-05-15 17:56:53,131 - ERROR - MainThread - GOOGLE_API_KEY environment variable not set. Exiting.
+2025-05-15 18:00:54,434 - INFO - MainThread - --- Starting Gemini Personalization Script ---
+2025-05-15 18:00:54,711 - INFO - MainThread - Reading input Excel file...
+2025-05-15 18:00:56,166 - INFO - MainThread - Successfully read 1461 rows from input/categorized_personas.xlsx sheet Sheet1.
+2025-05-15 18:00:56,166 - ERROR - MainThread - Input sheet is missing required columns for prompting: referenceableDataPoints_json, name. Exiting.
+2025-05-15 18:00:56,166 - INFO - MainThread - --- Script finished in 0:00:01.732560 ---
+2025-05-15 18:09:36,298 - INFO - MainThread - --- Starting Gemini Personalization Script ---
+2025-05-15 18:09:36,584 - INFO - MainThread - Reading input Excel file...
+2025-05-15 18:09:38,171 - INFO - MainThread - Successfully read 1461 rows from input/categorized_personas.xlsx sheet Sheet1.
+2025-05-15 18:09:38,171 - INFO - MainThread - Generating shortened company names...
+2025-05-15 18:09:38,191 - INFO - MainThread - Example shortened names:
+2025-05-15 18:09:38,191 - INFO - MainThread -   Original: 'The Bio-Leadership Project' -> Shortened: 'The Bio-Leadership'
+2025-05-15 18:09:38,191 - INFO - MainThread -   Original: 'Trinity Community Arts' -> Shortened: 'Trinity Community'
+2025-05-15 18:09:38,193 - INFO - MainThread -   Original: 'nan' -> Shortened: ''
+2025-05-15 18:09:38,193 - INFO - MainThread - Starting API calls with up to 5 workers...
+2025-05-15 18:09:41,781 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:09:41,781 - ERROR - ThreadPoolExecutor-0_3 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:09:41,843 - ERROR - ThreadPoolExecutor-0_1 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:09:41,872 - ERROR - ThreadPoolExecutor-0_2 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:09:42,032 - ERROR - ThreadPoolExecutor-0_4 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:09:51,212 - ERROR - ThreadPoolExecutor-0_4 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:09:51,249 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:09:51,449 - ERROR - ThreadPoolExecutor-0_3 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:09:51,469 - ERROR - ThreadPoolExecutor-0_1 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:09:51,662 - ERROR - ThreadPoolExecutor-0_2 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:09:58,081 - ERROR - ThreadPoolExecutor-0_0 - API call failed: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent?key=AIzaSyBSFUItxGK9sI8t6mv6j9B3xjb4qRJRvuA
+2025-05-15 18:09:58,081 - ERROR - ThreadPoolExecutor-0_0 - Response status: 429
+2025-05-15 18:09:58,081 - ERROR - ThreadPoolExecutor-0_0 - Response body: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.QuotaFailure",
+        "violations": [
+          {
+            "quotaMetric": "generativelanguage.googleapis.com/generate_content_free_tier_requests",
+            "quo
+2025-05-15 18:09:58,081 - WARNING - ThreadPoolExecutor-0_0 - Rate limit hit (429). Retrying after 30 seconds...
+2025-05-15 18:09:58,246 - ERROR - ThreadPoolExecutor-0_1 - API call failed: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent?key=AIzaSyBSFUItxGK9sI8t6mv6j9B3xjb4qRJRvuA
+2025-05-15 18:09:58,246 - ERROR - ThreadPoolExecutor-0_1 - Response status: 429
+2025-05-15 18:09:58,246 - ERROR - ThreadPoolExecutor-0_1 - Response body: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.QuotaFailure",
+        "violations": [
+          {
+            "quotaMetric": "generativelanguage.googleapis.com/generate_content_free_tier_requests",
+            "quo
+2025-05-15 18:09:58,246 - WARNING - ThreadPoolExecutor-0_1 - Rate limit hit (429). Retrying after 30 seconds...
+2025-05-15 18:09:58,277 - ERROR - ThreadPoolExecutor-0_3 - API call failed: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent?key=AIzaSyBSFUItxGK9sI8t6mv6j9B3xjb4qRJRvuA
+2025-05-15 18:09:58,277 - ERROR - ThreadPoolExecutor-0_3 - Response status: 429
+2025-05-15 18:09:58,277 - ERROR - ThreadPoolExecutor-0_3 - Response body: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.QuotaFailure",
+        "violations": [
+          {
+            "quotaMetric": "generativelanguage.googleapis.com/generate_content_free_tier_requests",
+            "quo
+2025-05-15 18:09:58,279 - WARNING - ThreadPoolExecutor-0_3 - Rate limit hit (429). Retrying after 30 seconds...
+2025-05-15 18:09:58,312 - ERROR - ThreadPoolExecutor-0_2 - API call failed: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent?key=AIzaSyBSFUItxGK9sI8t6mv6j9B3xjb4qRJRvuA
+2025-05-15 18:09:58,312 - ERROR - ThreadPoolExecutor-0_2 - Response status: 429
+2025-05-15 18:09:58,312 - ERROR - ThreadPoolExecutor-0_2 - Response body: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.QuotaFailure",
+        "violations": [
+          {
+            "quotaMetric": "generativelanguage.googleapis.com/generate_content_free_tier_requests",
+            "quo
+2025-05-15 18:09:58,321 - WARNING - ThreadPoolExecutor-0_2 - Rate limit hit (429). Retrying after 30 seconds...
+2025-05-15 18:10:00,382 - ERROR - ThreadPoolExecutor-0_4 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:10:06,922 - ERROR - ThreadPoolExecutor-0_4 - API call failed: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent?key=AIzaSyBSFUItxGK9sI8t6mv6j9B3xjb4qRJRvuA
+2025-05-15 18:10:06,922 - ERROR - ThreadPoolExecutor-0_4 - Response status: 429
+2025-05-15 18:10:06,922 - ERROR - ThreadPoolExecutor-0_4 - Response body: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.QuotaFailure",
+        "violations": [
+          {
+            "quotaMetric": "generativelanguage.googleapis.com/generate_content_free_tier_requests",
+            "quo
+2025-05-15 18:10:06,931 - WARNING - ThreadPoolExecutor-0_4 - Rate limit hit (429). Retrying after 30 seconds...
+2025-05-15 18:11:32,181 - INFO - MainThread - --- Starting Gemini Personalization Script ---
+2025-05-15 18:11:32,441 - INFO - MainThread - Reading input Excel file...
+2025-05-15 18:11:33,912 - INFO - MainThread - Successfully read 1461 rows from input/categorized_personas.xlsx sheet Sheet1.
+2025-05-15 18:11:33,912 - INFO - MainThread - Generating shortened company names...
+2025-05-15 18:11:33,931 - INFO - MainThread - Example shortened names:
+2025-05-15 18:11:33,931 - INFO - MainThread -   Original: 'The Bio-Leadership Project' -> Shortened: 'The Bio-Leadership'
+2025-05-15 18:11:33,932 - INFO - MainThread -   Original: 'Trinity Community Arts' -> Shortened: 'Trinity Community'
+2025-05-15 18:11:33,932 - INFO - MainThread -   Original: 'nan' -> Shortened: ''
+2025-05-15 18:11:33,932 - INFO - MainThread - Starting API calls with up to 1 workers...
+2025-05-15 18:11:37,104 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:11:46,259 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:11:55,232 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:12:05,242 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:12:14,088 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:12:23,772 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:12:32,906 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:12:42,302 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:12:52,262 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:13:01,335 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:13:10,267 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:13:19,411 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:13:28,840 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:13:37,937 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:13:46,862 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:13:55,711 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:14:04,398 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:14:13,326 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:14:22,372 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:14:31,052 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:14:40,312 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:14:49,282 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:14:58,722 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:15:08,071 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:15:17,232 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:15:26,601 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:15:36,005 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:15:44,972 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:15:54,212 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:16:03,601 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:16:12,432 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:16:21,502 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:16:30,672 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:16:39,648 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:16:48,681 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:16:57,664 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:17:06,842 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:17:15,848 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:30:24,572 - INFO - MainThread - --- Starting Gemini Personalization Script ---
+2025-05-15 18:30:24,914 - INFO - MainThread - Reading input Excel file...
+2025-05-15 18:30:26,486 - INFO - MainThread - Successfully read 1461 rows from input/categorized_personas.xlsx sheet Sheet1.
+2025-05-15 18:30:26,486 - INFO - MainThread - Generating shortened company names...
+2025-05-15 18:30:26,505 - INFO - MainThread - Example shortened names:
+2025-05-15 18:30:26,506 - INFO - MainThread -   Original: 'The Bio-Leadership Project' -> Shortened: 'The Bio-Leadership'
+2025-05-15 18:30:26,506 - INFO - MainThread -   Original: 'Trinity Community Arts' -> Shortened: 'Trinity Community'
+2025-05-15 18:30:26,507 - INFO - MainThread -   Original: 'nan' -> Shortened: ''
+2025-05-15 18:30:26,508 - INFO - MainThread - Starting API calls with up to 1 workers...
+2025-05-15 18:30:26,591 - INFO - MainThread - TEST MODE: Processing only 5 rows out of 1461
+2025-05-15 18:30:26,601 - INFO - MainThread - Processing batch 1/3 (2 rows)
+2025-05-15 18:30:29,821 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:30:35,830 - WARNING - MainThread - Row 0 returned with error: ERROR_JSON_PARSING: Failed to parse. Raw: 
+2025-05-15 18:30:39,242 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:30:45,255 - WARNING - MainThread - Row 1 returned with error: ERROR_JSON_PARSING: Failed to parse. Raw: 
+2025-05-15 18:30:45,284 - INFO - MainThread - Sleeping for 6.0 seconds between batches
+2025-05-15 18:30:51,286 - INFO - MainThread - Processing batch 2/3 (2 rows)
+2025-05-15 18:30:54,362 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:31:00,369 - WARNING - MainThread - Row 2 returned with error: ERROR_JSON_PARSING: Failed to parse. Raw: 
+2025-05-15 18:31:03,364 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:31:09,377 - WARNING - MainThread - Row 3 returned with error: ERROR_JSON_PARSING: Failed to parse. Raw: 
+2025-05-15 18:31:09,428 - INFO - MainThread - Sleeping for 6.0 seconds between batches
+2025-05-15 18:31:15,430 - INFO - MainThread - Processing batch 3/3 (1 rows)
+2025-05-15 18:31:18,741 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: 
+2025-05-15 18:31:24,744 - WARNING - MainThread - Row 4 returned with error: ERROR_JSON_PARSING: Failed to parse. Raw: 
+2025-05-15 18:31:24,755 - INFO - MainThread - Persona guidance fallback to 'General Professional' used 0 times out of 5 processed rows.
+2025-05-15 18:31:24,755 - INFO - MainThread - Finished processing 5/5 rows.
+2025-05-15 18:31:24,755 - WARNING - MainThread - Encountered errors in 5 rows (100.0%). Check 'error' column in output.
+2025-05-15 18:31:24,755 - INFO - MainThread - Mapping results back to DataFrame...
+2025-05-15 18:31:25,335 - INFO - MainThread - Test mode: Saving results to c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\output\TEST_MODE_processed_leads.xlsx...
+2025-05-15 18:31:25,526 - INFO - MainThread - Results saved successfully: 5 rows processed.
+2025-05-15 18:31:25,526 - INFO - MainThread - Processing summary: 5 rows processed with 5 errors (100.0%)
+2025-05-15 18:31:25,526 - INFO - MainThread - --- Script finished in 0:01:00.953871 ---
+2025-05-16 16:49:37,683 - INFO - MainThread - --- Starting Gemini Personalization Script ---
+2025-05-16 16:49:37,683 - INFO - MainThread - 🔍 RUNNING IN TEST MODE - Will only process 5 rows
+2025-05-16 16:49:37,683 - INFO - MainThread - 🔍 DRY RUN MODE ENABLED - No actual API calls will be made
+2025-05-16 16:49:37,684 - INFO - MainThread - Running API diagnostics...
+2025-05-16 16:49:37,684 - INFO - MainThread - 🔍 API Debug Information:
+2025-05-16 16:49:37,684 - INFO - MainThread -   URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent
+2025-05-16 16:49:37,684 - INFO - MainThread -   API Key Present: Yes
+2025-05-16 16:49:37,684 - INFO - MainThread -   API Key Length: 39
+2025-05-16 16:49:37,685 - INFO - MainThread -   Model Name: gemini-2.5-flash-preview-04-17
+2025-05-16 16:49:37,686 - INFO - MainThread -   Testing API connectivity...
+2025-05-16 16:49:38,248 - INFO - MainThread -   API Connection: Success ✅
+2025-05-16 16:49:38,249 - INFO - MainThread -   Available Models: models/chat-bison-001, models/text-bison-001, models/embedding-gecko-001, models/gemini-1.0-pro-vision-latest, models/gemini-pro-vision...
+2025-05-16 16:49:38,250 - WARNING - MainThread -   ⚠️ WARNING: gemini-2.5-flash-preview-04-17 is not in the list of available models!
+2025-05-16 16:49:41,993 - INFO - MainThread - Reading input Excel file...
+2025-05-16 16:49:43,751 - INFO - MainThread - Successfully read 1461 rows from input/categorized_personas.xlsx sheet Sheet1.
+2025-05-16 16:49:43,752 - INFO - MainThread - Validating referenceableDataPoints...
+2025-05-16 16:49:43,754 - INFO - MainThread - Generating shortened company names...
+2025-05-16 16:49:43,764 - INFO - MainThread - Example shortened names:
+2025-05-16 16:49:43,765 - INFO - MainThread -   Original: 'The Bio-Leadership Project' -> Shortened: 'The Bio-Leadership'
+2025-05-16 16:49:43,765 - INFO - MainThread -   Original: 'Trinity Community Arts' -> Shortened: 'Trinity Community'
+2025-05-16 16:49:43,765 - INFO - MainThread -   Original: 'nan' -> Shortened: ''
+2025-05-16 16:49:43,766 - INFO - MainThread - Starting API calls with up to 1 workers...
+2025-05-16 16:49:43,921 - INFO - MainThread - TEST MODE: Processing only 5 rows out of 1461
+2025-05-16 16:49:44,284 - INFO - MainThread - Processing batch 1/3 (2 rows)
+2025-05-16 16:49:44,284 - INFO - ThreadPoolExecutor-0_0 - DRY RUN: Using mock data for row 0
+2025-05-16 16:49:44,286 - INFO - ThreadPoolExecutor-0_0 - DRY RUN: Using mock data for row 1
+2025-05-16 16:49:44,286 - INFO - MainThread - Sleeping for 6.0 seconds between batches
+2025-05-16 16:49:50,287 - INFO - MainThread - Processing batch 2/3 (2 rows)
+2025-05-16 16:49:50,288 - INFO - ThreadPoolExecutor-0_0 - DRY RUN: Using mock data for row 2
+2025-05-16 16:49:50,288 - INFO - ThreadPoolExecutor-0_0 - DRY RUN: Using mock data for row 3
+2025-05-16 16:49:50,290 - INFO - MainThread - Sleeping for 6.0 seconds between batches
+2025-05-16 16:49:56,292 - INFO - MainThread - Processing batch 3/3 (1 rows)
+2025-05-16 16:49:56,292 - INFO - ThreadPoolExecutor-0_0 - DRY RUN: Using mock data for row 4
+2025-05-16 16:49:56,294 - INFO - MainThread - Persona guidance fallback to 'General Professional' used 0 times out of 5 processed rows.
+2025-05-16 16:49:56,294 - INFO - MainThread - Finished processing 5/5 rows.
+2025-05-16 16:49:56,294 - INFO - MainThread - Mapping results back to DataFrame...
+2025-05-16 16:49:56,390 - INFO - MainThread - Test mode: Saving results to c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\output\TEST_MODE_processed_leads.xlsx...
+2025-05-16 16:49:56,508 - INFO - MainThread - Results saved successfully: 5 rows processed.
+2025-05-16 16:49:56,509 - INFO - MainThread - Processing summary: 5 rows processed with 0 errors (0.0%)
+2025-05-16 16:49:56,509 - INFO - MainThread - --- Script finished in 0:00:18.825870 ---
+2025-05-16 16:51:23,745 - INFO - MainThread - --- Starting Gemini Personalization Script ---
+2025-05-16 16:51:23,746 - INFO - MainThread - 🔍 RUNNING IN TEST MODE - Will only process 5 rows
+2025-05-16 16:51:23,746 - INFO - MainThread - 🔍 DRY RUN MODE ENABLED - No actual API calls will be made
+2025-05-16 16:51:23,746 - INFO - MainThread - Running API diagnostics...
+2025-05-16 16:51:23,747 - INFO - MainThread - 🔍 API Debug Information:
+2025-05-16 16:51:23,747 - INFO - MainThread -   URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
+2025-05-16 16:51:23,747 - INFO - MainThread -   API Key Present: Yes
+2025-05-16 16:51:23,747 - INFO - MainThread -   API Key Length: 39
+2025-05-16 16:51:23,748 - INFO - MainThread -   Model Name: gemini-2.0-flash
+2025-05-16 16:51:23,748 - INFO - MainThread -   Testing API connectivity...
+2025-05-16 16:51:24,286 - INFO - MainThread -   API Connection: Success ✅
+2025-05-16 16:51:24,286 - INFO - MainThread -   Available Models: models/chat-bison-001, models/text-bison-001, models/embedding-gecko-001, models/gemini-1.0-pro-vision-latest, models/gemini-pro-vision...
+2025-05-16 16:51:24,287 - WARNING - MainThread -   ⚠️ WARNING: gemini-2.0-flash is not in the list of available models!
+2025-05-16 16:51:24,558 - INFO - MainThread - Reading input Excel file...
+2025-05-16 16:51:26,062 - INFO - MainThread - Successfully read 1461 rows from input/categorized_personas.xlsx sheet Sheet1.
+2025-05-16 16:51:26,062 - INFO - MainThread - Validating referenceableDataPoints...
+2025-05-16 16:51:26,064 - INFO - MainThread - Generating shortened company names...
+2025-05-16 16:51:26,074 - INFO - MainThread - Example shortened names:
+2025-05-16 16:51:26,076 - INFO - MainThread -   Original: 'The Bio-Leadership Project' -> Shortened: 'The Bio-Leadership'
+2025-05-16 16:51:26,076 - INFO - MainThread -   Original: 'Trinity Community Arts' -> Shortened: 'Trinity Community'
+2025-05-16 16:51:26,076 - INFO - MainThread -   Original: 'nan' -> Shortened: ''
+2025-05-16 16:51:26,076 - INFO - MainThread - Starting API calls with up to 1 workers...
+2025-05-16 16:51:26,153 - INFO - MainThread - TEST MODE: Processing only 5 rows out of 1461
+2025-05-16 16:51:26,162 - INFO - MainThread - Processing batch 1/3 (2 rows)
+2025-05-16 16:51:26,163 - INFO - ThreadPoolExecutor-0_0 - DRY RUN: Using mock data for row 0
+2025-05-16 16:51:26,163 - INFO - ThreadPoolExecutor-0_0 - DRY RUN: Using mock data for row 1
+2025-05-16 16:51:26,164 - INFO - MainThread - Sleeping for 4.0 seconds between batches
+2025-05-16 16:51:30,165 - INFO - MainThread - Processing batch 2/3 (2 rows)
+2025-05-16 16:51:30,166 - INFO - ThreadPoolExecutor-0_0 - DRY RUN: Using mock data for row 2
+2025-05-16 16:51:30,168 - INFO - ThreadPoolExecutor-0_0 - DRY RUN: Using mock data for row 3
+2025-05-16 16:51:30,172 - INFO - MainThread - Sleeping for 4.0 seconds between batches
+2025-05-16 16:51:34,174 - INFO - MainThread - Processing batch 3/3 (1 rows)
+2025-05-16 16:51:34,174 - INFO - ThreadPoolExecutor-0_0 - DRY RUN: Using mock data for row 4
+2025-05-16 16:51:34,177 - INFO - MainThread - Persona guidance fallback to 'General Professional' used 0 times out of 5 processed rows.
+2025-05-16 16:51:34,177 - INFO - MainThread - Finished processing 5/5 rows.
+2025-05-16 16:51:34,177 - INFO - MainThread - Mapping results back to DataFrame...
+2025-05-16 16:51:34,183 - INFO - MainThread - Test mode: Saving results to c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\output\TEST_MODE_processed_leads.xlsx...
+2025-05-16 16:51:34,228 - INFO - MainThread - Results saved successfully: 5 rows processed.
+2025-05-16 16:51:34,229 - INFO - MainThread - Processing summary: 5 rows processed with 0 errors (0.0%)
+2025-05-16 16:51:34,230 - INFO - MainThread - --- Script finished in 0:00:10.485230 ---
+2025-05-16 17:03:03,471 - INFO - MainThread - --- Starting Gemini Personalization Script ---
+2025-05-16 17:03:03,471 - INFO - MainThread - 🔍 RUNNING IN TEST MODE - Will only process 5 rows
+2025-05-16 17:03:03,472 - INFO - MainThread - 🔍 DRY RUN MODE ENABLED - No actual API calls will be made
+2025-05-16 17:03:03,472 - INFO - MainThread - Running API diagnostics...
+2025-05-16 17:03:03,472 - INFO - MainThread - 🔍 API Debug Information:
+2025-05-16 17:03:03,472 - INFO - MainThread -   URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
+2025-05-16 17:03:03,473 - INFO - MainThread -   API Key Present: Yes
+2025-05-16 17:03:03,473 - INFO - MainThread -   API Key Length: 39
+2025-05-16 17:03:03,473 - INFO - MainThread -   Model Name: gemini-2.0-flash
+2025-05-16 17:03:03,474 - INFO - MainThread -   Testing API connectivity...
+2025-05-16 17:03:04,013 - INFO - MainThread -   API Connection: Success ✅
+2025-05-16 17:03:04,014 - INFO - MainThread -   Available Models: models/chat-bison-001, models/text-bison-001, models/embedding-gecko-001, models/gemini-1.0-pro-vision-latest, models/gemini-pro-vision...
+2025-05-16 17:03:04,014 - WARNING - MainThread -   ⚠️ WARNING: gemini-2.0-flash is not in the list of available models!
+2025-05-16 17:03:04,293 - INFO - MainThread - Reading input Excel file...
+2025-05-16 17:03:05,790 - INFO - MainThread - Successfully read 1461 rows from input/categorized_personas.xlsx sheet Sheet1.
+2025-05-16 17:03:05,790 - INFO - MainThread - Validating referenceableDataPoints...
+2025-05-16 17:03:05,792 - INFO - MainThread - Generating shortened company names...
+2025-05-16 17:03:05,809 - INFO - MainThread - Example shortened names:
+2025-05-16 17:03:05,810 - INFO - MainThread -   Original: 'The Bio-Leadership Project' -> Shortened: 'The Bio-Leadership Project'
+2025-05-16 17:03:05,810 - INFO - MainThread -   Original: 'Trinity Community Arts' -> Shortened: 'Trinity'
+2025-05-16 17:03:05,811 - INFO - MainThread -   Original: 'nan' -> Shortened: ''
+2025-05-16 17:03:05,811 - INFO - MainThread - Starting API calls with up to 1 workers...
+2025-05-16 17:03:05,883 - INFO - MainThread - TEST MODE: Processing only 5 rows out of 1461
+2025-05-16 17:03:05,891 - INFO - MainThread - Processing batch 1/3 (2 rows)
+2025-05-16 17:03:05,892 - INFO - ThreadPoolExecutor-0_0 - DRY RUN: Using mock data for row 0
+2025-05-16 17:03:05,892 - INFO - ThreadPoolExecutor-0_0 - DRY RUN: Using mock data for row 1
+2025-05-16 17:03:05,893 - INFO - MainThread - Sleeping for 4.0 seconds between batches
+2025-05-16 17:03:09,895 - INFO - MainThread - Processing batch 2/3 (2 rows)
+2025-05-16 17:03:09,896 - INFO - ThreadPoolExecutor-0_0 - DRY RUN: Using mock data for row 2
+2025-05-16 17:03:09,897 - INFO - ThreadPoolExecutor-0_0 - DRY RUN: Using mock data for row 3
+2025-05-16 17:03:09,899 - INFO - MainThread - Sleeping for 4.0 seconds between batches
+2025-05-16 17:03:13,901 - INFO - MainThread - Processing batch 3/3 (1 rows)
+2025-05-16 17:03:13,902 - INFO - ThreadPoolExecutor-0_0 - DRY RUN: Using mock data for row 4
+2025-05-16 17:03:13,908 - INFO - MainThread - Persona guidance fallback to 'General Professional' used 0 times out of 5 processed rows.
+2025-05-16 17:03:13,910 - INFO - MainThread - Finished processing 5/5 rows.
+2025-05-16 17:03:13,911 - INFO - MainThread - Mapping results back to DataFrame...
+2025-05-16 17:03:13,926 - INFO - MainThread - Test mode: Saving results to c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\output\TEST_MODE_processed_leads.xlsx...
+2025-05-16 17:03:13,968 - INFO - MainThread - Results saved successfully: 5 rows processed.
+2025-05-16 17:03:13,969 - INFO - MainThread - Processing summary: 5 rows processed with 0 errors (0.0%)
+2025-05-16 17:03:13,969 - INFO - MainThread - --- Script finished in 0:00:10.497910 ---
+2025-05-16 17:10:32,085 - INFO - MainThread - --- Starting Gemini Personalization Script ---
+2025-05-16 17:10:32,085 - INFO - MainThread - 🔍 RUNNING IN TEST MODE - Will only process 5 rows
+2025-05-16 17:10:32,086 - INFO - MainThread - 🔍 DRY RUN MODE ENABLED - No actual API calls will be made
+2025-05-16 17:10:32,086 - INFO - MainThread - Running API diagnostics...
+2025-05-16 17:10:32,086 - INFO - MainThread - 🔍 API Debug Information:
+2025-05-16 17:10:32,087 - INFO - MainThread -   URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
+2025-05-16 17:10:32,087 - INFO - MainThread -   API Key Present: Yes
+2025-05-16 17:10:32,087 - INFO - MainThread -   API Key Length: 39
+2025-05-16 17:10:32,088 - INFO - MainThread -   Model Name: gemini-2.0-flash
+2025-05-16 17:10:32,088 - INFO - MainThread -   Testing API connectivity...
+2025-05-16 17:10:32,639 - INFO - MainThread -   API Connection: Success ✅
+2025-05-16 17:10:32,640 - INFO - MainThread -   Available Models: models/chat-bison-001, models/text-bison-001, models/embedding-gecko-001, models/gemini-1.0-pro-vision-latest, models/gemini-pro-vision...
+2025-05-16 17:10:32,916 - INFO - MainThread - Reading input Excel file...
+2025-05-16 17:10:34,387 - INFO - MainThread - Successfully read 1461 rows from input/categorized_personas.xlsx sheet Sheet1.
+2025-05-16 17:10:34,388 - INFO - MainThread - Validating referenceableDataPoints...
+2025-05-16 17:10:34,389 - INFO - MainThread - Generating shortened company names...
+2025-05-16 17:10:34,405 - INFO - MainThread - Example shortened names:
+2025-05-16 17:10:34,406 - INFO - MainThread -   Original: 'The Bio-Leadership Project' -> Shortened: 'The Bio-Leadership Project'
+2025-05-16 17:10:34,406 - INFO - MainThread -   Original: 'Trinity Community Arts' -> Shortened: 'Trinity'
+2025-05-16 17:10:34,407 - INFO - MainThread -   Original: 'nan' -> Shortened: ''
+2025-05-16 17:10:34,407 - INFO - MainThread - Starting API calls with up to 1 workers...
+2025-05-16 17:10:34,480 - INFO - MainThread - TEST MODE: Processing only 5 rows out of 1461
+2025-05-16 17:10:34,488 - INFO - MainThread - Processing batch 1/3 (2 rows)
+2025-05-16 17:10:34,489 - INFO - ThreadPoolExecutor-0_0 - DRY RUN: Using mock data for row 0
+2025-05-16 17:10:34,489 - INFO - ThreadPoolExecutor-0_0 - DRY RUN: Using mock data for row 1
+2025-05-16 17:10:34,490 - INFO - MainThread - Sleeping for 4.0 seconds between batches
+2025-05-16 17:10:38,492 - INFO - MainThread - Processing batch 2/3 (2 rows)
+2025-05-16 17:10:38,493 - INFO - ThreadPoolExecutor-0_0 - DRY RUN: Using mock data for row 2
+2025-05-16 17:10:38,493 - INFO - ThreadPoolExecutor-0_0 - DRY RUN: Using mock data for row 3
+2025-05-16 17:10:38,494 - INFO - MainThread - Sleeping for 4.0 seconds between batches
+2025-05-16 17:10:42,496 - INFO - MainThread - Processing batch 3/3 (1 rows)
+2025-05-16 17:10:42,497 - INFO - ThreadPoolExecutor-0_0 - DRY RUN: Using mock data for row 4
+2025-05-16 17:10:42,502 - INFO - MainThread - Persona guidance fallback to 'General Professional' used 0 times out of 5 processed rows.
+2025-05-16 17:10:42,504 - INFO - MainThread - Finished processing 5/5 rows.
+2025-05-16 17:10:42,505 - INFO - MainThread - Mapping results back to DataFrame...
+2025-05-16 17:10:42,513 - INFO - MainThread - Test mode: Saving results to c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\output\TEST_MODE_processed_leads.xlsx...
+2025-05-16 17:10:42,552 - INFO - MainThread - Results saved successfully: 5 rows processed.
+2025-05-16 17:10:42,554 - INFO - MainThread - Processing summary: 5 rows processed with 0 errors (0.0%)
+2025-05-16 17:10:42,554 - INFO - MainThread - --- Script finished in 0:00:10.469512 ---
+2025-05-16 17:12:05,347 - INFO - MainThread - --- Starting Gemini Personalization Script ---
+2025-05-16 17:12:05,348 - INFO - MainThread - 🔍 RUNNING IN TEST MODE - Will only process 7 rows
+2025-05-16 17:12:05,348 - INFO - MainThread - Running API diagnostics...
+2025-05-16 17:12:05,348 - INFO - MainThread - 🔍 API Debug Information:
+2025-05-16 17:12:05,348 - INFO - MainThread -   URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
+2025-05-16 17:12:05,349 - INFO - MainThread -   API Key Present: Yes
+2025-05-16 17:12:05,349 - INFO - MainThread -   API Key Length: 39
+2025-05-16 17:12:05,349 - INFO - MainThread -   Model Name: gemini-2.0-flash
+2025-05-16 17:12:05,350 - INFO - MainThread -   Testing API connectivity...
+2025-05-16 17:12:05,853 - INFO - MainThread -   API Connection: Success ✅
+2025-05-16 17:12:05,853 - INFO - MainThread -   Available Models: models/chat-bison-001, models/text-bison-001, models/embedding-gecko-001, models/gemini-1.0-pro-vision-latest, models/gemini-pro-vision...
+2025-05-16 17:12:06,127 - INFO - MainThread - Reading input Excel file...
+2025-05-16 17:12:07,603 - INFO - MainThread - Successfully read 1461 rows from input/categorized_personas.xlsx sheet Sheet1.
+2025-05-16 17:12:07,603 - INFO - MainThread - Validating referenceableDataPoints...
+2025-05-16 17:12:07,605 - INFO - MainThread - Generating shortened company names...
+2025-05-16 17:12:07,621 - INFO - MainThread - Example shortened names:
+2025-05-16 17:12:07,621 - INFO - MainThread -   Original: 'The Bio-Leadership Project' -> Shortened: 'The Bio-Leadership Project'
+2025-05-16 17:12:07,621 - INFO - MainThread -   Original: 'Trinity Community Arts' -> Shortened: 'Trinity'
+2025-05-16 17:12:07,622 - INFO - MainThread -   Original: 'nan' -> Shortened: ''
+2025-05-16 17:12:07,622 - INFO - MainThread - Starting API calls with up to 1 workers...
+2025-05-16 17:12:07,695 - INFO - MainThread - TEST MODE: Processing only 7 rows out of 1461
+2025-05-16 17:12:07,703 - INFO - MainThread - Processing batch 1/4 (2 rows)
+2025-05-16 17:12:07,704 - INFO - ThreadPoolExecutor-0_0 - Making API call to https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
+2025-05-16 17:12:09,233 - INFO - ThreadPoolExecutor-0_0 - API Response Status: 200
+2025-05-16 17:12:09,233 - INFO - ThreadPoolExecutor-0_0 - API Response Text: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\"personalisedIcebreaker\": \"The Bio-Leadership Project's focus on fostering collective intelligence really resonates.\", \"specificObservation\": \"I noticed The Bio-Leadership Project's commitment to driving systemic change through leadership development.\", \"specificPainPoint\": \"I imagine that scaling personalized leadership development programs while maintaining a high-quality, impa...
+2025-05-16 17:12:09,235 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: ```json
+{"personalisedIcebreaker": "The Bio-Leadership Project's focus on fostering collective intelligence really resonates.", "specificObservation": "I noticed The Bio-Leadership Project's commitment to driving systemic change through leadership development.", "specificPainPoint": "I imagine that scaling personalized leadership development programs while maintaining a high-quality, impactful experience is a key priority for The Bio-Leadership Project.", "impliedBelief": "I thought it may be us
+2025-05-16 17:12:13,237 - INFO - ThreadPoolExecutor-0_0 - Making API call to https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
+2025-05-16 17:12:13,238 - WARNING - MainThread - Row 0 returned with error: ERROR_JSON_PARSING: Failed to parse. Raw: ```json
+{"personalisedIcebreaker": "The Bio-Leadership Project's focus on fostering collective intel
+2025-05-16 17:12:13,242 - ERROR - MainThread - [WARNING] STOPPING EARLY: Error rate 100.0% exceeded threshold (20%)
+2025-05-16 17:12:13,247 - ERROR - MainThread - Row 0 generated an exception: [WARNING] STOPPING EARLY: Error rate 100.0% exceeded threshold (20%)
+Traceback (most recent call last):
+  File "c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\main.py", line 911, in main
+    raise RuntimeError(msg)
+RuntimeError: [WARNING] STOPPING EARLY: Error rate 100.0% exceeded threshold (20%)
+2025-05-16 17:12:14,909 - INFO - ThreadPoolExecutor-0_0 - API Response Status: 200
+2025-05-16 17:12:14,911 - INFO - ThreadPoolExecutor-0_0 - API Response Text: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\"personalisedIcebreaker\": \"I've enjoyed following your discussions on championing the voices of young female IFAs and shaping a more inclusive financial landscape. It's refreshing to see someone actively challenging the status quo.\", \"specificObservation\": \"I noticed your recent LinkedIn posts highlighting the importance of long-term financial planning for diverse client groups.\", \...
+2025-05-16 17:12:14,915 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: ```json
+{"personalisedIcebreaker": "I've enjoyed following your discussions on championing the voices of young female IFAs and shaping a more inclusive financial landscape. It's refreshing to see someone actively challenging the status quo.", "specificObservation": "I noticed your recent LinkedIn posts highlighting the importance of long-term financial planning for diverse client groups.", "specificPainPoint": "Based on that, I imagine ensuring consistent and personalized client experiences acro
+2025-05-16 17:12:18,919 - WARNING - MainThread - Row 1 returned with error: ERROR_JSON_PARSING: Failed to parse. Raw: ```json
+{"personalisedIcebreaker": "I've enjoyed following your discussions on championing the voice
+2025-05-16 17:12:18,920 - ERROR - MainThread - [WARNING] STOPPING EARLY: Error rate 150.0% exceeded threshold (20%)
+2025-05-16 17:12:18,921 - ERROR - MainThread - Row 1 generated an exception: [WARNING] STOPPING EARLY: Error rate 150.0% exceeded threshold (20%)
+Traceback (most recent call last):
+  File "c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\main.py", line 911, in main
+    raise RuntimeError(msg)
+RuntimeError: [WARNING] STOPPING EARLY: Error rate 150.0% exceeded threshold (20%)
+2025-05-16 17:12:18,923 - INFO - MainThread - Sleeping for 4.0 seconds between batches
+2025-05-16 17:12:22,924 - INFO - MainThread - Processing batch 2/4 (2 rows)
+2025-05-16 17:12:22,926 - INFO - ThreadPoolExecutor-0_0 - Making API call to https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
+2025-05-16 17:12:24,608 - INFO - ThreadPoolExecutor-0_0 - API Response Status: 200
+2025-05-16 17:12:24,609 - INFO - ThreadPoolExecutor-0_0 - API Response Text: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"personalisedIcebreaker\": \"Paul, the new ergonomic chair collection really caught my eye – especially given the focus on remote work.\",\n  \"specificObservation\": \"TC Group recently launched a new ergonomic chair collection focusing on the evolving needs of remote workers.\",\n  \"specificPainPoint\": \"Based on that, I imagine ensuring consistent employee well-being and productiv...
+2025-05-16 17:12:24,610 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: ```json
+{
+  "personalisedIcebreaker": "Paul, the new ergonomic chair collection really caught my eye – especially given the focus on remote work.",
+  "specificObservation": "TC Group recently launched a new ergonomic chair collection focusing on the evolving needs of remote workers.",
+  "specificPainPoint": "Based on that, I imagine ensuring consistent employee well-being and productivity across a distributed workforce is a key priority.",
+  "impliedBelief": "I thought it may be useful given you
+2025-05-16 17:12:28,614 - INFO - ThreadPoolExecutor-0_0 - Making API call to https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
+2025-05-16 17:12:28,615 - WARNING - MainThread - Row 2 returned with error: ERROR_JSON_PARSING: Failed to parse. Raw: ```json
+{
+  "personalisedIcebreaker": "Paul, the new ergonomic chair collection really caught my eye
+2025-05-16 17:12:28,620 - ERROR - MainThread - [WARNING] STOPPING EARLY: Error rate 166.7% exceeded threshold (20%)
+2025-05-16 17:12:28,621 - ERROR - MainThread - Row 2 generated an exception: [WARNING] STOPPING EARLY: Error rate 166.7% exceeded threshold (20%)
+Traceback (most recent call last):
+  File "c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\main.py", line 911, in main
+    raise RuntimeError(msg)
+RuntimeError: [WARNING] STOPPING EARLY: Error rate 166.7% exceeded threshold (20%)
+2025-05-16 17:12:30,154 - INFO - ThreadPoolExecutor-0_0 - API Response Status: 200
+2025-05-16 17:12:30,155 - INFO - ThreadPoolExecutor-0_0 - API Response Text: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\"personalisedIcebreaker\": \"Hope you're having a productive week, Robert. I've been following Jubb's work.\", \"specificObservation\": \"I see Jubb is focused on delivering innovative and sustainable solutions across various sectors.\", \"specificPainPoint\": \"I imagine managing the increasing complexity of data and reporting across these diverse projects is a priority for Jubb.\", \"imp...
+2025-05-16 17:12:30,160 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: ```json
+{"personalisedIcebreaker": "Hope you're having a productive week, Robert. I've been following Jubb's work.", "specificObservation": "I see Jubb is focused on delivering innovative and sustainable solutions across various sectors.", "specificPainPoint": "I imagine managing the increasing complexity of data and reporting across these diverse projects is a priority for Jubb.", "impliedBelief": "you probably value strategic advantages that come from enhanced insights and quicker decision-mak
+2025-05-16 17:12:34,170 - WARNING - MainThread - Row 3 returned with error: ERROR_JSON_PARSING: Failed to parse. Raw: ```json
+{"personalisedIcebreaker": "Hope you're having a productive week, Robert. I've been followin
+2025-05-16 17:12:34,172 - ERROR - MainThread - [WARNING] STOPPING EARLY: Error rate 175.0% exceeded threshold (20%)
+2025-05-16 17:12:34,174 - ERROR - MainThread - Row 3 generated an exception: [WARNING] STOPPING EARLY: Error rate 175.0% exceeded threshold (20%)
+Traceback (most recent call last):
+  File "c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\main.py", line 911, in main
+    raise RuntimeError(msg)
+RuntimeError: [WARNING] STOPPING EARLY: Error rate 175.0% exceeded threshold (20%)
+2025-05-16 17:12:34,183 - INFO - MainThread - Sleeping for 4.0 seconds between batches
+2025-05-16 17:12:38,185 - INFO - MainThread - Processing batch 3/4 (2 rows)
+2025-05-16 17:12:38,187 - INFO - ThreadPoolExecutor-0_0 - Making API call to https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
+2025-05-16 17:12:39,635 - INFO - ThreadPoolExecutor-0_0 - API Response Status: 200
+2025-05-16 17:12:39,637 - INFO - ThreadPoolExecutor-0_0 - API Response Text: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\"personalisedIcebreaker\": \"The RFU England kit launch with Umbro looked fantastic, Luke – a really strong campaign.\", \"specificObservation\": \"MLG UK LTD recently launched the RFU England Kit campaign in collaboration with Umbro.\", \"specificPainPoint\": \"I imagine ensuring maximum ROI from those high-profile campaigns is a key priority for MLG UK LTD.\", \"impliedBelief\": \"I thou...
+2025-05-16 17:12:39,642 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: ```json
+{"personalisedIcebreaker": "The RFU England kit launch with Umbro looked fantastic, Luke – a really strong campaign.", "specificObservation": "MLG UK LTD recently launched the RFU England Kit campaign in collaboration with Umbro.", "specificPainPoint": "I imagine ensuring maximum ROI from those high-profile campaigns is a key priority for MLG UK LTD.", "impliedBelief": "I thought it may be useful given you probably value strategic advantages that optimise campaign performance."}
+```
+2025-05-16 17:12:43,652 - INFO - ThreadPoolExecutor-0_0 - Making API call to https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
+2025-05-16 17:12:43,653 - WARNING - MainThread - Row 4 returned with error: ERROR_JSON_PARSING: Failed to parse. Raw: ```json
+{"personalisedIcebreaker": "The RFU England kit launch with Umbro looked fantastic, Luke – a
+2025-05-16 17:12:43,658 - ERROR - MainThread - [WARNING] STOPPING EARLY: Error rate 180.0% exceeded threshold (20%)
+2025-05-16 17:12:43,663 - ERROR - MainThread - Row 4 generated an exception: [WARNING] STOPPING EARLY: Error rate 180.0% exceeded threshold (20%)
+Traceback (most recent call last):
+  File "c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\main.py", line 911, in main
+    raise RuntimeError(msg)
+RuntimeError: [WARNING] STOPPING EARLY: Error rate 180.0% exceeded threshold (20%)
+2025-05-16 17:12:45,244 - INFO - ThreadPoolExecutor-0_0 - API Response Status: 200
+2025-05-16 17:12:45,247 - INFO - ThreadPoolExecutor-0_0 - API Response Text: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\"personalisedIcebreaker\": \"Hope you're having a productive week, Poul. I've been looking at Consol's approach to market leadership.\", \"specificObservation\": \"With limited public information on recent specific activities, it suggests a period of focused execution internally.\", \"specificPainPoint\": \"I imagine a key priority for Consol is optimizing internal processes to maintain a ...
+2025-05-16 17:12:45,248 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: ```json
+{"personalisedIcebreaker": "Hope you're having a productive week, Poul. I've been looking at Consol's approach to market leadership.", "specificObservation": "With limited public information on recent specific activities, it suggests a period of focused execution internally.", "specificPainPoint": "I imagine a key priority for Consol is optimizing internal processes to maintain a competitive edge without significant external distractions.", "impliedBelief": "you likely value strategic ad
+2025-05-16 17:12:49,252 - WARNING - MainThread - Row 5 returned with error: ERROR_JSON_PARSING: Failed to parse. Raw: ```json
+{"personalisedIcebreaker": "Hope you're having a productive week, Poul. I've been looking at
+2025-05-16 17:12:49,252 - ERROR - MainThread - [WARNING] STOPPING EARLY: 11 consecutive errors exceeded threshold (10)
+2025-05-16 17:12:49,253 - ERROR - MainThread - Row 5 generated an exception: [WARNING] STOPPING EARLY: 11 consecutive errors exceeded threshold (10)
+Traceback (most recent call last):
+  File "c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\main.py", line 904, in main
+    raise RuntimeError(msg)
+RuntimeError: [WARNING] STOPPING EARLY: 11 consecutive errors exceeded threshold (10)
+2025-05-16 17:12:49,256 - INFO - MainThread - Sleeping for 4.0 seconds between batches
+2025-05-16 17:12:53,257 - INFO - MainThread - Processing batch 4/4 (1 rows)
+2025-05-16 17:12:53,257 - INFO - ThreadPoolExecutor-0_0 - Making API call to https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
+2025-05-16 17:12:54,827 - INFO - ThreadPoolExecutor-0_0 - API Response Status: 200
+2025-05-16 17:12:54,828 - INFO - ThreadPoolExecutor-0_0 - API Response Text: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\"personalisedIcebreaker\": \"Toby, your work with Mogul Magazine really caught my eye – the focus on providing actionable business insights is incredibly valuable.\", \"specificObservation\": \"I noticed you're the founder of Mogul Magazine, which offers business and finance insights.\", \"specificPainPoint\": \"Based on that, I imagine maintaining a consistent stream of high-quality, rele...
+2025-05-16 17:12:54,834 - ERROR - ThreadPoolExecutor-0_0 - Failed to parse JSON response from Gemini: Expecting value: line 1 column 1 (char 0). Raw text: ```json
+{"personalisedIcebreaker": "Toby, your work with Mogul Magazine really caught my eye – the focus on providing actionable business insights is incredibly valuable.", "specificObservation": "I noticed you're the founder of Mogul Magazine, which offers business and finance insights.", "specificPainPoint": "Based on that, I imagine maintaining a consistent stream of high-quality, relevant content while scaling Mogul Magazine is a key priority.", "impliedBelief": "I thought it may be useful g
+2025-05-16 17:12:58,838 - WARNING - MainThread - Row 6 returned with error: ERROR_JSON_PARSING: Failed to parse. Raw: ```json
+{"personalisedIcebreaker": "Toby, your work with Mogul Magazine really caught my eye – the f
+2025-05-16 17:12:58,839 - ERROR - MainThread - [WARNING] STOPPING EARLY: 13 consecutive errors exceeded threshold (10)
+2025-05-16 17:12:58,840 - ERROR - MainThread - Row 6 generated an exception: [WARNING] STOPPING EARLY: 13 consecutive errors exceeded threshold (10)
+Traceback (most recent call last):
+  File "c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\main.py", line 904, in main
+    raise RuntimeError(msg)
+RuntimeError: [WARNING] STOPPING EARLY: 13 consecutive errors exceeded threshold (10)
+2025-05-16 17:12:58,842 - INFO - MainThread - Persona guidance fallback to 'General Professional' used 0 times out of 7 processed rows.
+2025-05-16 17:12:58,843 - INFO - MainThread - Finished processing 7/7 rows.
+2025-05-16 17:12:58,843 - WARNING - MainThread - Encountered errors in 7 rows (100.0%). Check 'error' column in output.
+2025-05-16 17:12:58,843 - INFO - MainThread - Mapping results back to DataFrame...
+2025-05-16 17:12:58,848 - INFO - MainThread - Test mode: Saving results to c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\output\TEST_MODE_processed_leads.xlsx...
+2025-05-16 17:12:58,885 - INFO - MainThread - Results saved successfully: 7 rows processed.
+2025-05-16 17:12:58,886 - INFO - MainThread - Processing summary: 7 rows processed with 7 errors (100.0%)
+2025-05-16 17:12:58,887 - INFO - MainThread - --- Script finished in 0:00:53.540067 ---
+2025-05-16 18:34:48,606 - INFO - MainThread - --- Starting Gemini Personalization Script ---
+2025-05-16 18:34:48,606 - INFO - MainThread - 🔍 RUNNING IN TEST MODE - Will only process 7 rows
+2025-05-16 18:34:48,607 - INFO - MainThread - Running API diagnostics...
+2025-05-16 18:34:48,607 - INFO - MainThread - 🔍 API Debug Information:
+2025-05-16 18:34:48,607 - INFO - MainThread -   URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
+2025-05-16 18:34:48,607 - INFO - MainThread -   API Key Present: Yes
+2025-05-16 18:34:48,607 - INFO - MainThread -   API Key Length: 39
+2025-05-16 18:34:48,607 - INFO - MainThread -   Model Name: gemini-2.0-flash
+2025-05-16 18:34:48,608 - INFO - MainThread -   Testing API connectivity...
+2025-05-16 18:34:49,181 - INFO - MainThread -   API Connection: Success ✅
+2025-05-16 18:34:49,182 - INFO - MainThread -   Available Models: models/chat-bison-001, models/text-bison-001, models/embedding-gecko-001, models/gemini-1.0-pro-vision-latest, models/gemini-pro-vision...
+2025-05-16 18:34:49,472 - INFO - MainThread - Reading input Excel file...
+2025-05-16 18:34:50,952 - INFO - MainThread - Successfully read 1461 rows from input/categorized_personas.xlsx sheet Sheet1.
+2025-05-16 18:34:50,953 - INFO - MainThread - Validating referenceableDataPoints...
+2025-05-16 18:34:50,955 - INFO - MainThread - Generating shortened company names...
+2025-05-16 18:34:50,971 - INFO - MainThread - Example shortened names:
+2025-05-16 18:34:50,972 - INFO - MainThread -   Original: 'The Bio-Leadership Project' -> Shortened: 'The Bio-Leadership Project'
+2025-05-16 18:34:50,972 - INFO - MainThread -   Original: 'Trinity Community Arts' -> Shortened: 'Trinity'
+2025-05-16 18:34:50,972 - INFO - MainThread -   Original: 'nan' -> Shortened: ''
+2025-05-16 18:34:50,973 - INFO - MainThread - Starting API calls with up to 1 workers...
+2025-05-16 18:34:51,043 - INFO - MainThread - TEST MODE: Processing only 7 rows out of 1461
+2025-05-16 18:34:51,052 - INFO - MainThread - Processing batch 1/4 (2 rows)
+2025-05-16 18:34:51,052 - INFO - ThreadPoolExecutor-0_0 - Making API call to https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
+2025-05-16 18:34:52,395 - INFO - ThreadPoolExecutor-0_0 - API Response Status: 200
+2025-05-16 18:34:52,397 - INFO - ThreadPoolExecutor-0_0 - API Response Text: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\"personalisedIcebreaker\": \"Hope you're having a good week, Andres. Your work with The Bio-Leadership Project is inspiring.\", \"specificObservation\": \"Based on the focus on leadership development,\", \"specificPainPoint\": \"I imagine that enhancing internal knowledge sharing and efficient onboarding is a priority for The Bio-Leadership Project.\", \"impliedBelief\": \"I thought it may...
+2025-05-16 18:34:56,407 - INFO - ThreadPoolExecutor-0_0 - Making API call to https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
+2025-05-16 18:34:57,799 - INFO - ThreadPoolExecutor-0_0 - API Response Status: 200
+2025-05-16 18:34:57,801 - INFO - ThreadPoolExecutor-0_0 - API Response Text: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\"personalisedIcebreaker\": \"Enjoying your insights on breaking industry norms and championing female leadership in finance, Adam.\", \"specificObservation\": \"Based on your work at Trinity Community Arts,\", \"specificPainPoint\": \"I imagine that ensuring your team has all the resources needed to provide excellent long-term financial guidance to clients is a priority for Trinity.\", \"i...
+2025-05-16 18:35:01,814 - INFO - MainThread - Sleeping for 4.0 seconds between batches
+2025-05-16 18:35:05,817 - INFO - MainThread - Processing batch 2/4 (2 rows)
+2025-05-16 18:35:05,819 - INFO - ThreadPoolExecutor-0_0 - Making API call to https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
+2025-05-16 18:35:07,366 - INFO - ThreadPoolExecutor-0_0 - API Response Status: 200
+2025-05-16 18:35:07,367 - INFO - ThreadPoolExecutor-0_0 - API Response Text: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"personalisedIcebreaker\": \"The new ergonomic chair collection speaks volumes about TC Group's commitment to employee well-being, especially in the remote work landscape.\",\n  \"specificObservation\": \"Based on TC Group's focus on sustainability and employee comfort,\",\n  \"specificPainPoint\": \"I imagine that maintaining consistent quality of service and efficient internal knowle...
+2025-05-16 18:35:11,379 - INFO - ThreadPoolExecutor-0_0 - Making API call to https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
+2025-05-16 18:35:12,714 - INFO - ThreadPoolExecutor-0_0 - API Response Status: 200
+2025-05-16 18:35:12,715 - INFO - ThreadPoolExecutor-0_0 - API Response Text: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\"personalisedIcebreaker\": \"Hope you're having a good week, Robert. Jubb's growth trajectory is certainly impressive.\", \"specificObservation\": \"Based on Jubb's continued expansion,\", \"specificPainPoint\": \"I imagine that maintaining operational efficiency at scale is a priority for Jubb.\", \"impliedBelief\": \"I thought it may be useful given you probably value innovative solution...
+2025-05-16 18:35:16,724 - INFO - MainThread - Sleeping for 4.0 seconds between batches
+2025-05-16 18:35:20,726 - INFO - MainThread - Processing batch 3/4 (2 rows)
+2025-05-16 18:35:20,728 - INFO - ThreadPoolExecutor-0_0 - Making API call to https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
+2025-05-16 18:35:22,152 - INFO - ThreadPoolExecutor-0_0 - API Response Status: 200
+2025-05-16 18:35:22,154 - INFO - ThreadPoolExecutor-0_0 - API Response Text: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\"personalisedIcebreaker\": \"The Sky Bet campaign caught my eye – impressive reach and engagement.\", \"specificObservation\": \"Based on MLG's work across sports and healthcare sectors,\", \"specificPainPoint\": \"I imagine that consistently delivering impactful results within budget is a priority for MLG.\", \"impliedBelief\": \"I thought it may be useful given you probably value innovat...
+2025-05-16 18:35:26,163 - INFO - ThreadPoolExecutor-0_0 - Making API call to https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
+2025-05-16 18:35:27,501 - INFO - ThreadPoolExecutor-0_0 - API Response Status: 200
+2025-05-16 18:35:27,503 - INFO - ThreadPoolExecutor-0_0 - API Response Text: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\"personalisedIcebreaker\": \"Hope you are having a good week, Poul. I've been following Consol's trajectory in the market.\", \"specificObservation\": \"Based on Consol's position,\", \"specificPainPoint\": \"I imagine that maintaining a competitive advantage through internal efficiency is a key priority for Consol.\", \"impliedBelief\": \"I thought it may be useful given you probably valu...
+2025-05-16 18:35:31,512 - INFO - MainThread - Sleeping for 4.0 seconds between batches
+2025-05-16 18:35:35,513 - INFO - MainThread - Processing batch 4/4 (1 rows)
+2025-05-16 18:35:35,515 - INFO - ThreadPoolExecutor-0_0 - Making API call to https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
+2025-05-16 18:35:37,039 - INFO - ThreadPoolExecutor-0_0 - API Response Status: 200
+2025-05-16 18:35:37,040 - INFO - ThreadPoolExecutor-0_0 - API Response Text: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\"personalisedIcebreaker\": \"Enjoying the insights from Mogul Magazine – it's great to see practical business knowledge shared so effectively.\", \"specificObservation\": \"Based on Full Circle's commitment to community empowerment in Bristol,\", \"specificPainPoint\": \"I imagine that demonstrating and quantifying the impact of these programs is a key priority for Pendennis Shipyard.\", \...
+2025-05-16 18:35:41,055 - INFO - MainThread - Persona guidance fallback to 'General Professional' used 0 times out of 7 processed rows.
+2025-05-16 18:35:41,056 - INFO - MainThread - Finished processing 7/7 rows.
+2025-05-16 18:35:41,058 - INFO - MainThread - Mapping results back to DataFrame...
+2025-05-16 18:35:41,067 - INFO - MainThread - Test mode: Saving results to c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\output\TEST_MODE_processed_leads.xlsx...
+2025-05-16 18:35:41,108 - INFO - MainThread - Results saved successfully: 7 rows processed.
+2025-05-16 18:35:41,109 - INFO - MainThread - Processing summary: 7 rows processed with 0 errors (0.0%)
+2025-05-16 18:35:41,109 - INFO - MainThread - --- Script finished in 0:00:52.503112 ---
+2025-05-16 18:42:12,071 - INFO - MainThread - --- Starting Gemini Personalization Script ---
+2025-05-16 18:42:12,071 - INFO - MainThread - 🔍 RUNNING IN TEST MODE - Will only process 7 rows
+2025-05-16 18:42:12,071 - INFO - MainThread - Running API diagnostics...
+2025-05-16 18:42:12,071 - INFO - MainThread - 🔍 API Debug Information:
+2025-05-16 18:42:12,072 - INFO - MainThread -   URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
+2025-05-16 18:42:12,072 - INFO - MainThread -   API Key Present: Yes
+2025-05-16 18:42:12,072 - INFO - MainThread -   API Key Length: 39
+2025-05-16 18:42:12,073 - INFO - MainThread -   Model Name: gemini-2.0-flash
+2025-05-16 18:42:12,073 - INFO - MainThread -   Testing API connectivity...
+2025-05-16 18:42:12,628 - INFO - MainThread -   API Connection: Success ✅
+2025-05-16 18:42:12,629 - INFO - MainThread -   Available Models: models/chat-bison-001, models/text-bison-001, models/embedding-gecko-001, models/gemini-1.0-pro-vision-latest, models/gemini-pro-vision...
+2025-05-16 18:42:12,901 - INFO - MainThread - Reading input Excel file...
+2025-05-16 18:42:14,424 - INFO - MainThread - Successfully read 1461 rows from input/categorized_personas.xlsx sheet Sheet1.
+2025-05-16 18:42:14,424 - INFO - MainThread - Validating referenceableDataPoints...
+2025-05-16 18:42:14,426 - INFO - MainThread - Generating shortened company names...
+2025-05-16 18:42:14,442 - INFO - MainThread - Example shortened names:
+2025-05-16 18:42:14,443 - INFO - MainThread -   Original: 'The Bio-Leadership Project' -> Shortened: 'The Bio-Leadership Project'
+2025-05-16 18:42:14,443 - INFO - MainThread -   Original: 'Trinity Community Arts' -> Shortened: 'Trinity'
+2025-05-16 18:42:14,443 - INFO - MainThread -   Original: 'nan' -> Shortened: ''
+2025-05-16 18:42:14,444 - INFO - MainThread - Starting API calls with up to 1 workers...
+2025-05-16 18:42:14,515 - INFO - MainThread - TEST MODE: Processing only 7 rows out of 1461
+2025-05-16 18:42:14,525 - INFO - MainThread - Processing batch 1/4 (2 rows)
+2025-05-16 18:42:14,525 - INFO - ThreadPoolExecutor-0_0 - Making API call to https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
+2025-05-16 18:42:16,020 - INFO - ThreadPoolExecutor-0_0 - API Response Status: 200
+2025-05-16 18:42:16,022 - INFO - ThreadPoolExecutor-0_0 - API Response Text: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\"personalisedIcebreaker\": \"Hope you're having a good week. I've been impressed with The Bio-Leadership Project's focus on sustainable leadership principles.\", \"specificObservation\": \"Based on your commitment to fostering impactful leadership,\", \"specificPainPoint\": \"I imagine that empowering your team with the most efficient tools and knowledge resources is a constant priority fo...
+2025-05-16 18:42:20,032 - INFO - ThreadPoolExecutor-0_0 - Making API call to https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
+2025-05-16 18:42:21,356 - INFO - ThreadPoolExecutor-0_0 - API Response Status: 200
+2025-05-16 18:42:21,357 - INFO - ThreadPoolExecutor-0_0 - API Response Text: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\"personalisedIcebreaker\": \"Enjoying your posts about changing perceptions in the financial advisory space.\", \"specificObservation\": \"Based on your focus on breaking industry norms,\", \"specificPainPoint\": \"I imagine that ensuring your team has the tools and knowledge to stay ahead is a priority for Trinity.\", \"impliedBelief\": \"I thought it may be useful given you probably valu...
+2025-05-16 18:42:25,369 - INFO - MainThread - Sleeping for 4.0 seconds between batches
+2025-05-16 18:42:29,372 - INFO - MainThread - Processing batch 2/4 (2 rows)
+2025-05-16 18:42:29,374 - INFO - ThreadPoolExecutor-0_0 - Making API call to https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
+2025-05-16 18:42:30,839 - INFO - ThreadPoolExecutor-0_0 - API Response Status: 200
+2025-05-16 18:42:30,840 - INFO - ThreadPoolExecutor-0_0 - API Response Text: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\"personalisedIcebreaker\": \"The new ergonomic chair collection looks like a great addition to your product line, especially given the shift towards remote work.\", \"specificObservation\": \"Based on TC Group's commitment to sustainability and recent product launches,\", \"specificPainPoint\": \"I imagine that maintaining a consistent and efficient employee experience across all departmen...
+2025-05-16 18:42:34,852 - INFO - ThreadPoolExecutor-0_0 - Making API call to https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
+2025-05-16 18:42:36,392 - INFO - ThreadPoolExecutor-0_0 - API Response Status: 200
+2025-05-16 18:42:36,393 - INFO - ThreadPoolExecutor-0_0 - API Response Text: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\"personalisedIcebreaker\": \"Hope you're having a great week. Jubb's commitment to innovative solutions in engineering is impressive.\", \"specificObservation\": \"Based on Jubb's continued growth and project diversity,\", \"specificPainPoint\": \"I imagine that optimising internal efficiency to maintain a competitive edge is a priority for Jubb.\", \"impliedBelief\": \"I thought it may be...
+2025-05-16 18:42:40,405 - INFO - MainThread - Sleeping for 4.0 seconds between batches
+2025-05-16 18:42:44,406 - INFO - MainThread - Processing batch 3/4 (2 rows)
+2025-05-16 18:42:44,406 - INFO - ThreadPoolExecutor-0_0 - Making API call to https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
+2025-05-16 18:42:45,869 - INFO - ThreadPoolExecutor-0_0 - API Response Status: 200
+2025-05-16 18:42:45,870 - INFO - ThreadPoolExecutor-0_0 - API Response Text: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\"personalisedIcebreaker\": \"The Sky Bet campaign looked great – a really effective piece of work.\", \"specificObservation\": \"Based on your work with high-profile clients like Umbro and the EFL,\", \"specificPainPoint\": \"I imagine that demonstrating clear ROI on marketing spend is a constant priority for MLG.\", \"impliedBelief\": \"I thought it may be useful given you probably value ...
+2025-05-16 18:42:49,874 - INFO - ThreadPoolExecutor-0_0 - Making API call to https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
+2025-05-16 18:42:51,169 - INFO - ThreadPoolExecutor-0_0 - API Response Status: 200
+2025-05-16 18:42:51,170 - INFO - ThreadPoolExecutor-0_0 - API Response Text: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\"personalisedIcebreaker\": \"Hope you're having a good week. I've been following Consol's trajectory in the market.\", \"specificObservation\": \"Based on Consol's position in the industry,\", \"specificPainPoint\": \"I imagine that maintaining a competitive edge through efficiency gains is a priority for Consol.\", \"impliedBelief\": \"I thought it may be useful given you probably value i...
+2025-05-16 18:42:55,179 - INFO - MainThread - Sleeping for 4.0 seconds between batches
+2025-05-16 18:42:59,181 - INFO - MainThread - Processing batch 4/4 (1 rows)
+2025-05-16 18:42:59,183 - INFO - ThreadPoolExecutor-0_0 - Making API call to https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
+2025-05-16 18:43:00,741 - INFO - ThreadPoolExecutor-0_0 - API Response Status: 200
+2025-05-16 18:43:00,742 - INFO - ThreadPoolExecutor-0_0 - API Response Text: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\"personalisedIcebreaker\": \"Your work with Mogul Magazine is impressive – providing valuable business insights is clearly making a difference.\", \"specificObservation\": \"Based on Full Circle Docklands' community empowerment programs in Bristol,\", \"specificPainPoint\": \"I imagine that demonstrating and optimising the tangible impact of those initiatives is a priority for Full Circle ...
+2025-05-16 18:43:04,749 - INFO - MainThread - Persona guidance fallback to 'General Professional' used 0 times out of 7 processed rows.
+2025-05-16 18:43:04,751 - INFO - MainThread - Finished processing 7/7 rows.
+2025-05-16 18:43:04,752 - INFO - MainThread - Mapping results back to DataFrame...
+2025-05-16 18:43:04,763 - INFO - MainThread - Test mode: Saving results to c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\output\TEST_MODE_processed_leads.xlsx...
+2025-05-16 18:43:04,807 - INFO - MainThread - Results saved successfully: 7 rows processed.
+2025-05-16 18:43:04,808 - INFO - MainThread - Processing summary: 7 rows processed with 0 errors (0.0%)
+2025-05-16 18:43:04,809 - INFO - MainThread - --- Script finished in 0:00:52.739308 ---
+2025-05-16 18:55:03,443 - INFO - MainThread - --- Starting Gemini Personalization Script ---
+2025-05-16 18:55:03,444 - INFO - MainThread - 🔍 RUNNING IN TEST MODE - Will only process 7 rows
+2025-05-16 18:55:03,444 - INFO - MainThread - Running API diagnostics...
+2025-05-16 18:55:03,444 - INFO - MainThread - 🔍 API Debug Information:
+2025-05-16 18:55:03,445 - INFO - MainThread -   URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
+2025-05-16 18:55:03,446 - INFO - MainThread -   API Key Present: Yes
+2025-05-16 18:55:03,446 - INFO - MainThread -   API Key Length: 39
+2025-05-16 18:55:03,446 - INFO - MainThread -   Model Name: gemini-2.0-flash
+2025-05-16 18:55:03,446 - INFO - MainThread -   Testing API connectivity...
+2025-05-16 18:55:04,099 - INFO - MainThread -   API Connection: Success ✅
+2025-05-16 18:55:04,100 - INFO - MainThread -   Available Models: models/chat-bison-001, models/text-bison-001, models/embedding-gecko-001, models/gemini-1.0-pro-vision-latest, models/gemini-pro-vision...
+2025-05-16 18:55:04,379 - INFO - MainThread - Reading input Excel file...
+2025-05-16 18:55:05,934 - INFO - MainThread - Successfully read 1461 rows from input/categorized_personas.xlsx sheet Sheet1.
+2025-05-16 18:55:05,935 - INFO - MainThread - Validating referenceableDataPoints...
+2025-05-16 18:55:05,937 - INFO - MainThread - Generating shortened company names...
+2025-05-16 18:55:05,952 - INFO - MainThread - Example shortened names:
+2025-05-16 18:55:05,953 - INFO - MainThread -   Original: 'The Bio-Leadership Project' -> Shortened: 'The Bio-Leadership Project'
+2025-05-16 18:55:05,953 - INFO - MainThread -   Original: 'Trinity Community Arts' -> Shortened: 'Trinity'
+2025-05-16 18:55:05,954 - INFO - MainThread -   Original: 'nan' -> Shortened: ''
+2025-05-16 18:55:05,954 - INFO - MainThread - Starting API calls with up to 1 workers...
+2025-05-16 18:55:06,026 - INFO - MainThread - TEST MODE: Processing only 7 rows out of 1461
+2025-05-16 18:55:06,034 - INFO - MainThread - Processing batch 1/4 (2 rows)
+2025-05-16 18:55:06,035 - INFO - ThreadPoolExecutor-0_0 - Making API call to https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
+2025-05-16 18:55:07,597 - INFO - ThreadPoolExecutor-0_0 - API Response Status: 200
+2025-05-16 18:55:07,598 - INFO - ThreadPoolExecutor-0_0 - API Response Text: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\"personalisedIcebreaker\": \"Your work with The Bio-Leadership Project is inspiring, particularly the focus on developing purpose-driven leaders.\", \"specificObservation\": \"Based on The Bio-Leadership Project's mission to foster a more sustainable and equitable world,\", \"specificPainPoint\": \"I imagine that attracting and retaining top talent who deeply align with those values is a c...
+2025-05-16 18:55:11,602 - INFO - ThreadPoolExecutor-0_0 - Making API call to https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
+2025-05-16 18:55:13,124 - INFO - ThreadPoolExecutor-0_0 - API Response Status: 200
+2025-05-16 18:55:13,126 - INFO - ThreadPoolExecutor-0_0 - API Response Text: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\n  \"personalisedIcebreaker\": \"It’s great to see your focus on breaking down industry norms and championing long-term financial guidance.\",\n  \"specificObservation\": \"Based on your active discussions surrounding the challenges of being a young financial adviser,\",\n  \"specificPainPoint\": \"I imagine that streamlining internal processes to free up more time for client interactions ...
+2025-05-16 18:55:17,132 - INFO - MainThread - Sleeping for 4.0 seconds between batches
+2025-05-16 18:55:21,133 - INFO - MainThread - Processing batch 2/4 (2 rows)
+2025-05-16 18:55:21,136 - INFO - ThreadPoolExecutor-0_0 - Making API call to https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
+2025-05-16 18:55:22,667 - INFO - ThreadPoolExecutor-0_0 - API Response Status: 200
+2025-05-16 18:55:22,668 - INFO - ThreadPoolExecutor-0_0 - API Response Text: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\"personalisedIcebreaker\": \"The sustainability program TC Group launched last month looks really impactful.\", \"specificObservation\": \"Based on the focus on ergonomic solutions and sustainability initiatives, \", \"specificPainPoint\": \"I imagine that creating streamlined and efficient processes for your team is a priority for TC Group.\", \"impliedBelief\": \"I thought it may be usef...
+2025-05-16 18:55:26,671 - INFO - ThreadPoolExecutor-0_0 - Making API call to https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
+2025-05-16 18:55:28,241 - INFO - ThreadPoolExecutor-0_0 - API Response Status: 200
+2025-05-16 18:55:28,243 - INFO - ThreadPoolExecutor-0_0 - API Response Text: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\"personalisedIcebreaker\": \"Hope you're having a great week, Robert. I've been following Jubb's recent projects.\", \"specificObservation\": \"Based on Jubb's consistent growth,\", \"specificPainPoint\": \"I imagine that maintaining operational efficiency and a competitive edge while scaling is a priority for Jubb.\", \"impliedBelief\": \"I thought it may be useful given you probably valu...
+2025-05-16 18:55:32,258 - INFO - MainThread - Sleeping for 4.0 seconds between batches
+2025-05-16 18:55:36,261 - INFO - MainThread - Processing batch 3/4 (2 rows)
+2025-05-16 18:55:36,263 - INFO - ThreadPoolExecutor-0_0 - Making API call to https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
+2025-05-16 18:55:37,609 - INFO - ThreadPoolExecutor-0_0 - API Response Status: 200
+2025-05-16 18:55:37,610 - INFO - ThreadPoolExecutor-0_0 - API Response Text: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\"personalisedIcebreaker\": \"The work with Sky Bet and Umbro caught my eye – consistently delivering impactful campaigns.\", \"specificObservation\": \"Based on your ongoing client work with brands like Umbro and Sky Bet,\", \"specificPainPoint\": \"I imagine that demonstrating clear ROI to those clients is a constant priority for MLG.\", \"impliedBelief\": \"I thought it may be useful giv...
+2025-05-16 18:55:41,620 - INFO - ThreadPoolExecutor-0_0 - Making API call to https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
+2025-05-16 18:55:43,140 - INFO - ThreadPoolExecutor-0_0 - API Response Status: 200
+2025-05-16 18:55:43,142 - INFO - ThreadPoolExecutor-0_0 - API Response Text: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\"personalisedIcebreaker\": \"I've been following Consol's growth in the sector; impressive to see.\", \"specificObservation\": \"Based on your leadership role,\", \"specificPainPoint\": \"I imagine that maintaining a strategic overview while also driving operational efficiency is a key priority for Consol.\", \"impliedBelief\": \"I thought it may be useful given you probably value innovati...
+2025-05-16 18:55:47,152 - INFO - MainThread - Sleeping for 4.0 seconds between batches
+2025-05-16 18:55:51,153 - INFO - MainThread - Processing batch 4/4 (1 rows)
+2025-05-16 18:55:51,154 - INFO - ThreadPoolExecutor-0_0 - Making API call to https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
+2025-05-16 18:55:52,574 - INFO - ThreadPoolExecutor-0_0 - API Response Status: 200
+2025-05-16 18:55:52,576 - INFO - ThreadPoolExecutor-0_0 - API Response Text: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "```json\n{\"personalisedIcebreaker\": \"Your commitment to community empowerment in Bristol is truly impressive.\", \"specificObservation\": \"Based on your role as Founder of Mogul Magazine,\", \"specificPainPoint\": \"I imagine that maximizing the impact and reach of business insights is a priority for Full Circle Docklands.\", \"impliedBelief\": \"I thought it may be useful given you probably valu...
+2025-05-16 18:55:56,590 - INFO - MainThread - Persona guidance fallback to 'General Professional' used 0 times out of 7 processed rows.
+2025-05-16 18:55:56,592 - INFO - MainThread - Finished processing 7/7 rows.
+2025-05-16 18:55:56,593 - INFO - MainThread - Mapping results back to DataFrame...
+2025-05-16 18:55:56,611 - INFO - MainThread - Test mode: Saving results to c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\output\TEST_MODE_processed_leads.xlsx...
+2025-05-16 18:55:56,662 - INFO - MainThread - Results saved successfully: 7 rows processed.
+2025-05-16 18:55:56,663 - INFO - MainThread - Processing summary: 7 rows processed with 0 errors (0.0%)
+2025-05-16 18:55:56,664 - INFO - MainThread - --- Script finished in 0:00:53.220524 ---
+2025-05-19 18:00:25,398 - INFO - MainThread - --- Starting Gemini Personalization Script ---
+2025-05-19 18:00:25,399 - INFO - MainThread - 🔍 RUNNING IN TEST MODE - Will only process 7 rows
+2025-05-19 18:00:31,118 - INFO - MainThread - Reading main input Excel file: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\categorized_personas.xlsx
+2025-05-19 18:00:33,117 - INFO - MainThread - Successfully read 1461 rows from input/categorized_personas.xlsx sheet Sheet1.
+2025-05-19 18:00:33,139 - INFO - MainThread - LinkedIn posts file not configured or name not provided. Skipping LinkedIn data integration.
+2025-05-19 18:00:33,140 - INFO - MainThread - Validating referenceableDataPoints...
+2025-05-19 18:00:33,147 - INFO - MainThread - Generating shortened company names...
+2025-05-19 18:00:33,248 - INFO - MainThread - TEST MODE: Processing only 7 of 1461 available rows.
+2025-05-19 18:00:33,249 - INFO - MainThread - Starting API calls with up to 1 workers for 7 tasks...
+2025-05-19 18:01:12,790 - INFO - MainThread - Persona guidance fallback used 0 times for 7 processed rows.
+2025-05-19 18:01:12,791 - INFO - MainThread - Finished processing. API calls made for 7/7 rows.
+2025-05-19 18:01:12,791 - INFO - MainThread - Mapping results back to DataFrame...
+2025-05-19 18:01:13,399 - INFO - MainThread - Test mode: Saving results to c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\output\TEST_MODE_processed_leads.xlsx...
+2025-05-19 18:01:13,607 - INFO - MainThread - Results saved: 7 rows.
+2025-05-19 18:01:13,608 - INFO - MainThread - Saved data summary: 0 errors (0.0%).
+2025-05-19 18:01:13,609 - INFO - MainThread - --- Script finished in 0:00:48.211107 ---
+2025-05-19 18:10:02,822 - INFO - MainThread - --- Starting Gemini Personalization Script ---
+2025-05-19 18:10:02,823 - INFO - MainThread - 🔍 RUNNING IN TEST MODE - Will only process 9 rows
+2025-05-19 18:10:03,117 - INFO - MainThread - Reading main input Excel file: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\categorized_personas.xlsx
+2025-05-19 18:10:04,667 - INFO - MainThread - Successfully read 1461 rows from input/categorized_personas.xlsx sheet Sheet1.
+2025-05-19 18:10:04,667 - INFO - MainThread - LinkedIn posts file not configured or name not provided. Skipping LinkedIn data integration.
+2025-05-19 18:10:04,668 - INFO - MainThread - Validating referenceableDataPoints...
+2025-05-19 18:10:04,672 - INFO - MainThread - Generating shortened company names...
+2025-05-19 18:10:04,769 - INFO - MainThread - TEST MODE: Processing only 9 of 1461 available rows.
+2025-05-19 18:10:04,770 - INFO - MainThread - Starting API calls with up to 1 workers for 9 tasks...
+2025-05-19 18:10:21,823 - WARNING - MainThread - Process interrupted by user.
+2025-05-19 18:10:21,825 - WARNING - MainThread - Cancelling remaining tasks and saving partial results...
+2025-05-19 18:10:27,194 - INFO - MainThread - Persona guidance fallback used 0 times for 2 processed rows.
+2025-05-19 18:10:27,196 - INFO - MainThread - Finished processing. API calls made for 2/9 rows.
+2025-05-19 18:10:27,197 - INFO - MainThread - Mapping results back to DataFrame...
+2025-05-19 18:10:27,228 - INFO - MainThread - Test mode: Saving results to c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\output\TEST_MODE_processed_leads.xlsx...
+2025-05-19 18:10:27,282 - INFO - MainThread - Results saved: 9 rows.
+2025-05-19 18:10:27,283 - INFO - MainThread - Saved data summary: 0 errors (0.0%).
+2025-05-19 18:10:27,284 - INFO - MainThread - --- Script finished in 0:00:24.461361 ---
+2025-05-19 18:12:54,812 - INFO - MainThread - --- Starting Gemini Personalization Script ---
+2025-05-19 18:12:54,812 - INFO - MainThread - 🔍 RUNNING IN TEST MODE - Will only process 1 rows
+2025-05-19 18:12:55,081 - INFO - MainThread - Reading main input Excel file: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\categorized_personas.xlsx
+2025-05-19 18:12:56,639 - INFO - MainThread - Successfully read 1461 rows from input/categorized_personas.xlsx sheet Sheet1.
+2025-05-19 18:12:56,639 - INFO - MainThread - LinkedIn posts file not configured or name not provided. Skipping LinkedIn data integration.
+2025-05-19 18:12:56,640 - INFO - MainThread - Validating referenceableDataPoints...
+2025-05-19 18:12:56,644 - INFO - MainThread - Generating shortened company names...
+2025-05-19 18:12:56,738 - INFO - MainThread - TEST MODE: Processing only 1 of 1461 available rows.
+2025-05-19 18:12:56,738 - INFO - MainThread - Starting API calls with up to 1 workers for 1 tasks...
+2025-05-19 18:13:02,098 - INFO - MainThread - Persona guidance fallback used 0 times for 1 processed rows.
+2025-05-19 18:13:02,099 - INFO - MainThread - Finished processing. API calls made for 1/1 rows.
+2025-05-19 18:13:02,099 - INFO - MainThread - Mapping results back to DataFrame...
+2025-05-19 18:13:02,104 - INFO - MainThread - Test mode: Saving results to c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\output\TEST_MODE_processed_leads.xlsx...
+2025-05-19 18:13:02,144 - INFO - MainThread - Results saved: 1 rows.
+2025-05-19 18:13:02,145 - INFO - MainThread - Saved data summary: 0 errors (0.0%).
+2025-05-19 18:13:02,145 - INFO - MainThread - --- Script finished in 0:00:07.333348 ---
+2025-05-19 18:17:16,770 - INFO - MainThread - --- Starting Gemini Personalization Script ---
+2025-05-19 18:17:16,771 - INFO - MainThread - 🔍 RUNNING IN TEST MODE - Will only process 1 rows
+2025-05-19 18:17:25,064 - INFO - MainThread - Reading main input Excel file: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\categorized_personas.xlsx
+2025-05-19 18:17:26,709 - INFO - MainThread - Successfully read 1461 rows from input/categorized_personas.xlsx sheet Sheet1.
+2025-05-19 18:17:26,709 - INFO - MainThread - LinkedIn posts file not configured or name not provided. Skipping LinkedIn data integration.
+2025-05-19 18:17:26,710 - INFO - MainThread - Validating referenceableDataPoints...
+2025-05-19 18:17:26,714 - INFO - MainThread - Generating shortened company names...
+2025-05-19 18:17:26,803 - INFO - MainThread - TEST MODE: Processing only 1 of 1461 available rows.
+2025-05-19 18:17:26,804 - INFO - MainThread - Starting API calls with up to 1 workers for 1 tasks...
+2025-05-19 18:17:32,448 - INFO - MainThread - Persona guidance fallback used 0 times for 1 processed rows.
+2025-05-19 18:17:32,450 - INFO - MainThread - Finished processing. API calls made for 1/1 rows.
+2025-05-19 18:17:32,451 - INFO - MainThread - Mapping results back to DataFrame...
+2025-05-19 18:17:32,470 - INFO - MainThread - Test mode: Saving results to c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\output\TEST_MODE_processed_leads.xlsx...
+2025-05-19 18:17:32,541 - INFO - MainThread - Results saved: 1 rows.
+2025-05-19 18:17:32,542 - INFO - MainThread - Saved data summary: 0 errors (0.0%).
+2025-05-19 18:17:32,543 - INFO - MainThread - --- Script finished in 0:00:15.773055 ---
+2025-05-19 18:21:40,162 - INFO - MainThread - --- Starting Gemini Personalization Script ---
+2025-05-19 18:21:40,163 - INFO - MainThread - 🔍 RUNNING IN TEST MODE - Will only process 1 rows
+2025-05-19 18:21:40,439 - INFO - MainThread - Reading main input Excel file: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\categorized_personas.xlsx
+2025-05-19 18:21:41,982 - INFO - MainThread - Successfully read 1461 rows from input/categorized_personas.xlsx sheet Sheet1.
+2025-05-19 18:21:41,983 - INFO - MainThread - LinkedIn posts file not configured or name not provided. Skipping LinkedIn data integration.
+2025-05-19 18:21:41,984 - INFO - MainThread - Validating referenceableDataPoints...
+2025-05-19 18:21:41,987 - INFO - MainThread - Generating shortened company names...
+2025-05-19 18:21:42,084 - INFO - MainThread - TEST MODE: Processing only 1 of 1461 available rows.
+2025-05-19 18:21:42,085 - INFO - MainThread - Starting API calls with up to 1 workers for 1 tasks...
+2025-05-19 18:21:47,719 - INFO - MainThread - Persona guidance fallback used 0 times for 1 processed rows.
+2025-05-19 18:21:47,720 - INFO - MainThread - Finished processing. API calls made for 1/1 rows.
+2025-05-19 18:21:47,722 - INFO - MainThread - Mapping results back to DataFrame...
+2025-05-19 18:21:47,740 - INFO - MainThread - Test mode: Saving results to c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\output\TEST_MODE_processed_leads.xlsx...
+2025-05-19 18:21:47,800 - INFO - MainThread - Results saved: 1 rows.
+2025-05-19 18:21:47,801 - INFO - MainThread - Saved data summary: 0 errors (0.0%).
+2025-05-19 18:21:47,801 - INFO - MainThread - --- Script finished in 0:00:07.639539 ---
+2025-05-19 18:24:37,292 - INFO - MainThread - --- Starting Gemini Personalization Script ---
+2025-05-19 18:24:37,293 - INFO - MainThread - 🔍 RUNNING IN TEST MODE - Will only process 1 rows
+2025-05-19 18:24:37,568 - INFO - MainThread - Reading main input Excel file: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\categorized_personas.xlsx
+2025-05-19 18:24:39,095 - INFO - MainThread - Successfully read 1461 rows from input/categorized_personas.xlsx sheet Sheet1.
+2025-05-19 18:24:39,096 - INFO - MainThread - [DEBUG] LI_POSTS_CONFIG: {}
+2025-05-19 18:24:39,096 - INFO - MainThread - [DEBUG] LI_POSTS_FILE_NAME: None
+2025-05-19 18:24:39,097 - INFO - MainThread - [DEBUG] LINKEDIN_POSTS_FILE_PATH: None
+2025-05-19 18:24:39,097 - INFO - MainThread - LinkedIn posts file not configured or name not provided. Skipping LinkedIn data integration.
+2025-05-19 18:24:39,097 - INFO - MainThread - Validating referenceableDataPoints...
+2025-05-19 18:24:39,102 - INFO - MainThread - Generating shortened company names...
+2025-05-19 18:24:39,193 - INFO - MainThread - TEST MODE: Processing only 1 of 1461 available rows.
+2025-05-19 18:24:39,193 - INFO - MainThread - Starting API calls with up to 1 workers for 1 tasks...
+2025-05-19 18:24:44,740 - INFO - MainThread - Persona guidance fallback used 0 times for 1 processed rows.
+2025-05-19 18:24:44,741 - INFO - MainThread - Finished processing. API calls made for 1/1 rows.
+2025-05-19 18:24:44,743 - INFO - MainThread - Mapping results back to DataFrame...
+2025-05-19 18:24:44,760 - INFO - MainThread - Test mode: Saving results to c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\output\TEST_MODE_processed_leads.xlsx...
+2025-05-19 18:24:44,804 - INFO - MainThread - Results saved: 1 rows.
+2025-05-19 18:24:44,806 - INFO - MainThread - Saved data summary: 0 errors (0.0%).
+2025-05-19 18:24:44,806 - INFO - MainThread - --- Script finished in 0:00:07.514102 ---
+2025-05-19 18:26:39,640 - INFO - MainThread - --- Starting Gemini Personalization Script ---
+2025-05-19 18:26:39,640 - INFO - MainThread - 🔍 RUNNING IN TEST MODE - Will only process 1 rows
+2025-05-19 18:26:39,924 - INFO - MainThread - Reading main input Excel file: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\categorized_personas.xlsx
+2025-05-19 18:26:41,453 - INFO - MainThread - Successfully read 1461 rows from input/categorized_personas.xlsx sheet Sheet1.
+2025-05-19 18:26:41,454 - INFO - MainThread - [DEBUG] LI_POSTS_CONFIG: {'directory': 'input/LI_post_activity', 'name': 'result (20).csv', 'sheet': 'result (20)', 'key_column_li_df': 'profileUrl', 'content_column': 'postContent', 'timestamp_column': 'postTimestamp', 'key_column_main_df': 'linkedinProfileUrl', 'max_posts_per_person': 2, 'max_post_age_days': 30}
+2025-05-19 18:26:41,454 - INFO - MainThread - [DEBUG] LI_POSTS_FILE_NAME: result (20).csv
+2025-05-19 18:26:41,455 - INFO - MainThread - [DEBUG] LINKEDIN_POSTS_FILE_PATH: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\LI_post_activity\result (20).csv
+2025-05-19 18:26:41,455 - INFO - MainThread - [DEBUG] LinkedIn posts file exists: True
+2025-05-19 18:26:41,455 - INFO - MainThread - Reading LinkedIn posts from: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\LI_post_activity\result (20).csv
+2025-05-19 18:26:41,545 - INFO - MainThread - Read 1908 LinkedIn post entries.
+2025-05-19 18:26:41,776 - INFO - MainThread - Filtered to 359 posts within last 30 days.
+2025-05-19 18:26:41,897 - ERROR - MainThread - Error processing LinkedIn posts data: 'formatted_linkedin_posts'
+Traceback (most recent call last):
+  File "C:\Users\rossp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\pandas\core\indexes\base.py", line 3790, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 152, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 181, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'formatted_linkedin_posts'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\main.py", line 646, in main
+    df['formatted_linkedin_posts'].fillna("No specific recent LinkedIn posts provided for this contact.\n", inplace=True)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rossp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\pandas\core\frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rossp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\pandas\core\indexes\base.py", line 3797, in get_loc
+    raise KeyError(key) from err
+KeyError: 'formatted_linkedin_posts'
+2025-05-19 18:26:42,054 - INFO - MainThread - Validating referenceableDataPoints...
+2025-05-19 18:26:42,059 - INFO - MainThread - Generating shortened company names...
+2025-05-19 18:26:42,147 - INFO - MainThread - TEST MODE: Processing only 1 of 1461 available rows.
+2025-05-19 18:26:42,147 - INFO - MainThread - Starting API calls with up to 1 workers for 1 tasks...
+2025-05-19 18:26:47,622 - INFO - MainThread - Persona guidance fallback used 0 times for 1 processed rows.
+2025-05-19 18:26:47,623 - INFO - MainThread - Finished processing. API calls made for 1/1 rows.
+2025-05-19 18:26:47,623 - INFO - MainThread - Mapping results back to DataFrame...
+2025-05-19 18:26:47,627 - INFO - MainThread - Test mode: Saving results to c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\output\TEST_MODE_processed_leads.xlsx...
+2025-05-19 18:26:47,661 - INFO - MainThread - Results saved: 1 rows.
+2025-05-19 18:26:47,662 - INFO - MainThread - Saved data summary: 0 errors (0.0%).
+2025-05-19 18:26:47,663 - INFO - MainThread - --- Script finished in 0:00:08.022904 ---
+2025-05-19 18:28:40,691 - INFO - MainThread - --- Starting Gemini Personalization Script ---
+2025-05-19 18:28:40,691 - INFO - MainThread - 🔍 RUNNING IN TEST MODE - Will only process 1 rows
+2025-05-19 18:28:41,000 - INFO - MainThread - Reading main input Excel file: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\categorized_personas.xlsx
+2025-05-19 18:28:42,537 - INFO - MainThread - Successfully read 1461 rows from input/categorized_personas.xlsx sheet Sheet1.
+2025-05-19 18:28:42,538 - INFO - MainThread - [DEBUG] LI_POSTS_CONFIG: {'directory': 'input/LI_post_activity', 'name': 'result (20).csv', 'sheet': 'result (20)', 'key_column_li_df': 'profileUrl', 'content_column': 'postContent', 'timestamp_column': 'postTimestamp', 'key_column_main_df': 'linkedinProfileUrl', 'max_posts_per_person': 2, 'max_post_age_days': 30}
+2025-05-19 18:28:42,539 - INFO - MainThread - [DEBUG] LI_POSTS_FILE_NAME: result (20).csv
+2025-05-19 18:28:42,539 - INFO - MainThread - [DEBUG] LINKEDIN_POSTS_FILE_PATH: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\LI_post_activity\result (20).csv
+2025-05-19 18:28:42,540 - INFO - MainThread - [DEBUG] LinkedIn posts file exists: True
+2025-05-19 18:28:42,540 - INFO - MainThread - Reading LinkedIn posts from: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\LI_post_activity\result (20).csv
+2025-05-19 18:28:42,567 - INFO - MainThread - Read 1908 LinkedIn post entries.
+2025-05-19 18:28:42,582 - INFO - MainThread - Filtered to 359 posts within last 30 days.
+2025-05-19 18:28:42,631 - INFO - MainThread - Merged LinkedIn posts. Main df length changed from 1461 to 1461 (duplicates if any should be reviewed).
+2025-05-19 18:28:42,632 - INFO - MainThread - No prospects had matching LinkedIn posts after processing.
+2025-05-19 18:28:42,632 - INFO - MainThread - Validating referenceableDataPoints...
+2025-05-19 18:28:42,638 - INFO - MainThread - Generating shortened company names...
+2025-05-19 18:28:42,727 - INFO - MainThread - TEST MODE: Processing only 1 of 1461 available rows.
+2025-05-19 18:28:42,727 - INFO - MainThread - Starting API calls with up to 1 workers for 1 tasks...
+2025-05-19 18:28:48,296 - INFO - MainThread - Persona guidance fallback used 0 times for 1 processed rows.
+2025-05-19 18:28:48,296 - INFO - MainThread - Finished processing. API calls made for 1/1 rows.
+2025-05-19 18:28:48,297 - INFO - MainThread - Mapping results back to DataFrame...
+2025-05-19 18:28:48,306 - INFO - MainThread - Test mode: Saving results to c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\output\TEST_MODE_processed_leads.xlsx...
+2025-05-19 18:28:48,350 - INFO - MainThread - Results saved: 1 rows.
+2025-05-19 18:28:48,352 - INFO - MainThread - Saved data summary: 0 errors (0.0%).
+2025-05-19 18:28:48,352 - INFO - MainThread - --- Script finished in 0:00:07.660416 ---
+2025-05-19 18:29:24,008 - INFO - MainThread - --- Starting Gemini Personalization Script ---
+2025-05-19 18:29:24,009 - INFO - MainThread - 🔍 RUNNING IN TEST MODE - Will only process 9 rows
+2025-05-19 18:29:24,276 - INFO - MainThread - Reading main input Excel file: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\categorized_personas.xlsx
+2025-05-19 18:29:25,799 - INFO - MainThread - Successfully read 1461 rows from input/categorized_personas.xlsx sheet Sheet1.
+2025-05-19 18:29:25,800 - INFO - MainThread - [DEBUG] LI_POSTS_CONFIG: {'directory': 'input/LI_post_activity', 'name': 'result (20).csv', 'sheet': 'result (20)', 'key_column_li_df': 'profileUrl', 'content_column': 'postContent', 'timestamp_column': 'postTimestamp', 'key_column_main_df': 'linkedinProfileUrl', 'max_posts_per_person': 2, 'max_post_age_days': 30}
+2025-05-19 18:29:25,801 - INFO - MainThread - [DEBUG] LI_POSTS_FILE_NAME: result (20).csv
+2025-05-19 18:29:25,801 - INFO - MainThread - [DEBUG] LINKEDIN_POSTS_FILE_PATH: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\LI_post_activity\result (20).csv
+2025-05-19 18:29:25,802 - INFO - MainThread - [DEBUG] LinkedIn posts file exists: True
+2025-05-19 18:29:25,802 - INFO - MainThread - Reading LinkedIn posts from: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\LI_post_activity\result (20).csv
+2025-05-19 18:29:25,829 - INFO - MainThread - Read 1908 LinkedIn post entries.
+2025-05-19 18:29:25,844 - INFO - MainThread - Filtered to 359 posts within last 30 days.
+2025-05-19 18:29:25,893 - INFO - MainThread - Merged LinkedIn posts. Main df length changed from 1461 to 1461 (duplicates if any should be reviewed).
+2025-05-19 18:29:25,894 - INFO - MainThread - No prospects had matching LinkedIn posts after processing.
+2025-05-19 18:29:25,894 - INFO - MainThread - Validating referenceableDataPoints...
+2025-05-19 18:29:25,898 - INFO - MainThread - Generating shortened company names...
+2025-05-19 18:29:25,988 - INFO - MainThread - TEST MODE: Processing only 9 of 1461 available rows.
+2025-05-19 18:29:25,988 - INFO - MainThread - Starting API calls with up to 1 workers for 9 tasks...
+2025-05-19 18:29:59,350 - WARNING - MainThread - Process interrupted by user.
+2025-05-19 18:29:59,352 - WARNING - MainThread - Cancelling remaining tasks and saving partial results...
+2025-05-19 18:30:04,885 - INFO - MainThread - Persona guidance fallback used 0 times for 5 processed rows.
+2025-05-19 18:30:04,887 - INFO - MainThread - Finished processing. API calls made for 5/9 rows.
+2025-05-19 18:30:04,888 - INFO - MainThread - Mapping results back to DataFrame...
+2025-05-19 18:30:04,912 - INFO - MainThread - Test mode: Saving results to c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\output\TEST_MODE_processed_leads.xlsx...
+2025-05-19 18:30:05,007 - INFO - MainThread - Results saved: 9 rows.
+2025-05-19 18:30:05,008 - INFO - MainThread - Saved data summary: 0 errors (0.0%).
+2025-05-19 18:30:05,009 - INFO - MainThread - --- Script finished in 0:00:40.999637 ---
+2025-05-19 18:40:47,319 - INFO - MainThread - --- Starting Gemini Personalization Script ---
+2025-05-19 18:40:47,319 - INFO - MainThread - 🔍 RUNNING IN TEST MODE - Will only process 9 rows
+2025-05-19 18:40:47,602 - INFO - MainThread - Reading main input Excel file: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\categorized_personas.xlsx
+2025-05-19 18:40:49,132 - INFO - MainThread - Successfully read 1461 rows from input/categorized_personas.xlsx sheet Sheet1.
+2025-05-19 18:40:49,133 - INFO - MainThread - [DEBUG] LI_POSTS_CONFIG: {'directory': 'input/LI_post_activity', 'name': 'result (20).csv', 'sheet': 'result (20)', 'key_column_li_df': 'profileUrl', 'content_column': 'postContent', 'timestamp_column': 'postTimestamp', 'key_column_main_df': 'linkedinProfileUrl', 'max_posts_per_person': 2, 'max_post_age_days': 30}
+2025-05-19 18:40:49,133 - INFO - MainThread - [DEBUG] LI_POSTS_FILE_NAME: result (20).csv
+2025-05-19 18:40:49,133 - INFO - MainThread - [DEBUG] LINKEDIN_POSTS_FILE_PATH: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\LI_post_activity\result (20).csv
+2025-05-19 18:40:49,134 - INFO - MainThread - [DEBUG] LinkedIn posts file exists: True
+2025-05-19 18:40:49,134 - INFO - MainThread - Reading LinkedIn posts from: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\LI_post_activity\result (20).csv
+2025-05-19 18:40:49,163 - INFO - MainThread - Read 1908 LinkedIn post entries.
+2025-05-19 18:40:49,177 - INFO - MainThread - Filtered to 359 posts within last 30 days.
+2025-05-19 18:40:49,225 - INFO - MainThread - Merged LinkedIn posts. Main df length changed from 1461 to 1461 (duplicates if any should be reviewed).
+2025-05-19 18:40:49,226 - INFO - MainThread - No prospects had matching LinkedIn posts after processing.
+2025-05-19 18:40:49,258 - INFO - MainThread - Filtered main DataFrame to 0 rows with matching LinkedIn profiles (from 1461).
+2025-05-19 18:40:49,259 - INFO - MainThread - Validating referenceableDataPoints...
+2025-05-19 18:40:49,259 - ERROR - MainThread - All rows filtered out due to missing referenceableDataPoints.
+2025-05-19 18:40:49,260 - INFO - MainThread - --- Script finished in 0:00:01.940909 ---
+2025-05-19 18:44:50,476 - INFO - MainThread - --- Starting Gemini Personalization Script ---
+2025-05-19 18:44:50,476 - INFO - MainThread - 🔍 RUNNING IN TEST MODE - Will only process 9 rows
+2025-05-19 18:44:50,746 - INFO - MainThread - Reading main input Excel file: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\categorized_personas.xlsx
+2025-05-19 18:44:52,287 - INFO - MainThread - Successfully read 1461 rows from input/categorized_personas.xlsx sheet Sheet1.
+2025-05-19 18:44:52,288 - INFO - MainThread - [DEBUG] LI_POSTS_CONFIG: {'directory': 'input/LI_post_activity', 'name': 'result (20).csv', 'sheet': 'result (20)', 'key_column_li_df': 'profileUrl', 'content_column': 'postContent', 'timestamp_column': 'postTimestamp', 'key_column_main_df': 'linkedinProfileUrl', 'max_posts_per_person': 2, 'max_post_age_days': 30}
+2025-05-19 18:44:52,288 - INFO - MainThread - [DEBUG] LI_POSTS_FILE_NAME: result (20).csv
+2025-05-19 18:44:52,289 - INFO - MainThread - [DEBUG] LINKEDIN_POSTS_FILE_PATH: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\LI_post_activity\result (20).csv
+2025-05-19 18:44:52,289 - INFO - MainThread - [DEBUG] LinkedIn posts file exists: True
+2025-05-19 18:44:52,289 - INFO - MainThread - Reading LinkedIn posts from: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\LI_post_activity\result (20).csv
+2025-05-19 18:44:52,318 - INFO - MainThread - Read 1908 LinkedIn post entries.
+2025-05-19 18:44:52,336 - INFO - MainThread - Filtered to 359 posts within last 30 days.
+2025-05-19 18:44:52,387 - INFO - MainThread - Merged LinkedIn posts. Main df length changed from 1461 to 1461 (duplicates if any should be reviewed).
+2025-05-19 18:44:52,388 - INFO - MainThread - No prospects had matching LinkedIn posts after processing.
+2025-05-19 18:44:52,392 - INFO - MainThread - Filtered main DataFrame to 0 rows with matching LinkedIn profiles (from 1461).
+2025-05-19 18:44:52,392 - INFO - MainThread - [DEBUG] No final output rows with matching LinkedIn posts found after filtering.
+2025-05-19 18:44:52,393 - INFO - MainThread - Validating referenceableDataPoints...
+2025-05-19 18:44:52,393 - ERROR - MainThread - All rows filtered out due to missing referenceableDataPoints.
+2025-05-19 18:44:52,394 - INFO - MainThread - --- Script finished in 0:00:01.918648 ---
+2025-05-19 18:52:13,849 - INFO - MainThread - --- Starting Gemini Personalization Script ---
+2025-05-19 18:52:13,850 - INFO - MainThread - 🔍 RUNNING IN TEST MODE - Will only process 9 rows
+2025-05-19 18:52:14,386 - INFO - MainThread - Reading main input Excel file: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\categorized_personas.xlsx
+2025-05-19 18:52:15,926 - INFO - MainThread - Successfully read 1461 rows from input/categorized_personas.xlsx sheet Sheet1.
+2025-05-19 18:52:15,927 - INFO - MainThread - [DEBUG] LI_POSTS_CONFIG: {'directory': 'input/LI_post_activity', 'name': 'result (20).csv', 'sheet': 'result (20)', 'key_column_li_df': 'profileUrl', 'content_column': 'postContent', 'timestamp_column': 'postTimestamp', 'key_column_main_df': 'linkedinProfileUrl', 'max_posts_per_person': 2, 'max_post_age_days': 60}
+2025-05-19 18:52:15,928 - INFO - MainThread - [DEBUG] LI_POSTS_FILE_NAME: result (20).csv
+2025-05-19 18:52:15,928 - INFO - MainThread - [DEBUG] LINKEDIN_POSTS_FILE_PATH: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\LI_post_activity\result (20).csv
+2025-05-19 18:52:15,929 - INFO - MainThread - [DEBUG] LinkedIn posts file exists: True
+2025-05-19 18:52:15,929 - INFO - MainThread - Reading LinkedIn posts from: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\LI_post_activity\result (20).csv
+2025-05-19 18:52:15,956 - INFO - MainThread - Read 1908 LinkedIn post entries.
+2025-05-19 18:52:15,970 - INFO - MainThread - Filtered to 622 posts within last 60 days.
+2025-05-19 18:52:16,037 - INFO - MainThread - Merged LinkedIn posts. Main df length changed from 1461 to 1461 (duplicates if any should be reviewed).
+2025-05-19 18:52:16,038 - INFO - MainThread - No prospects had matching LinkedIn posts after processing.
+2025-05-19 18:52:16,042 - INFO - MainThread - Filtered main DataFrame to 0 rows with matching LinkedIn profiles (from 1461).
+2025-05-19 18:52:16,043 - INFO - MainThread - [DEBUG] No final output rows with matching LinkedIn posts found after filtering.
+2025-05-19 18:52:16,044 - INFO - MainThread - Validating referenceableDataPoints...
+2025-05-19 18:52:16,044 - ERROR - MainThread - All rows filtered out due to missing referenceableDataPoints.
+2025-05-19 18:52:16,045 - INFO - MainThread - --- Script finished in 0:00:02.196006 ---
+2025-05-19 19:00:28,963 - INFO - MainThread - --- Starting Gemini Personalization Script ---
+2025-05-19 19:00:28,963 - INFO - MainThread - 🔍 RUNNING IN TEST MODE - Will only process 9 rows
+2025-05-19 19:00:29,242 - INFO - MainThread - Reading main input Excel file: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\categorized_personas.xlsx
+2025-05-19 19:00:30,749 - INFO - MainThread - Successfully read 1461 rows from input/categorized_personas.xlsx sheet Sheet1.
+2025-05-19 19:00:30,750 - INFO - MainThread - [DEBUG] LI_POSTS_CONFIG: {'directory': 'input/LI_post_activity', 'name': 'result (20).csv', 'sheet': 'result (20)', 'key_column_li_df': 'profileUrl', 'content_column': 'postContent', 'timestamp_column': 'postTimestamp', 'key_column_main_df': 'linkedinProfileUrl', 'max_posts_per_person': 2, 'max_post_age_days': 60}
+2025-05-19 19:00:30,750 - INFO - MainThread - [DEBUG] LI_POSTS_FILE_NAME: result (20).csv
+2025-05-19 19:00:30,751 - INFO - MainThread - [DEBUG] LINKEDIN_POSTS_FILE_PATH: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\LI_post_activity\result (20).csv
+2025-05-19 19:00:30,751 - INFO - MainThread - [DEBUG] LinkedIn posts file exists: True
+2025-05-19 19:00:30,752 - INFO - MainThread - Reading LinkedIn posts from: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\LI_post_activity\result (20).csv
+2025-05-19 19:00:30,782 - INFO - MainThread - Read 1908 LinkedIn post entries.
+2025-05-19 19:00:30,796 - INFO - MainThread - Filtered to 622 posts within last 60 days.
+2025-05-19 19:00:30,859 - INFO - MainThread - Merged LinkedIn posts. Main df length changed from 1461 to 1461 (duplicates if any should be reviewed).
+2025-05-19 19:00:30,860 - INFO - MainThread - No prospects had matching LinkedIn posts after processing.
+2025-05-19 19:00:30,864 - INFO - MainThread - Filtered main DataFrame to 0 rows with matching LinkedIn profiles (from 1461).
+2025-05-19 19:00:30,865 - INFO - MainThread - [DEBUG] No final output rows with matching LinkedIn posts found after filtering.
+2025-05-19 19:00:30,866 - INFO - MainThread - Validating referenceableDataPoints...
+2025-05-19 19:00:30,886 - INFO - MainThread - Filtered main DataFrame to 0 rows with valid referenceableDataPoints (from 0).
+2025-05-19 19:00:30,887 - ERROR - MainThread - All rows filtered out due to missing referenceableDataPoints.
+2025-05-19 19:00:30,887 - INFO - MainThread - --- Script finished in 0:00:01.924204 ---
+2025-05-19 19:05:01,304 - INFO - MainThread - --- Starting Gemini Personalization Script ---
+2025-05-19 19:05:01,304 - INFO - MainThread - 🔍 RUNNING IN TEST MODE - Will only process 9 rows
+2025-05-19 19:05:01,579 - INFO - MainThread - Reading main input Excel file: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\categorized_personas.xlsx
+2025-05-19 19:05:03,129 - INFO - MainThread - Successfully read 1461 rows from input/categorized_personas.xlsx sheet Sheet1.
+2025-05-19 19:05:03,130 - INFO - MainThread - [DEBUG] LI_POSTS_CONFIG: {'directory': 'input/LI_post_activity', 'name': 'result (20).csv', 'sheet': 'result (20)', 'key_column_li_df': 'profileUrl', 'content_column': 'postContent', 'timestamp_column': 'postTimestamp', 'key_column_main_df': 'linkedinProfileUrl', 'max_posts_per_person': 2, 'max_post_age_days': 60}
+2025-05-19 19:05:03,131 - INFO - MainThread - [DEBUG] LI_POSTS_FILE_NAME: result (20).csv
+2025-05-19 19:05:03,132 - INFO - MainThread - [DEBUG] LINKEDIN_POSTS_FILE_PATH: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\LI_post_activity\result (20).csv
+2025-05-19 19:05:03,132 - INFO - MainThread - [DEBUG] LinkedIn posts file exists: True
+2025-05-19 19:05:03,133 - INFO - MainThread - Reading LinkedIn posts from: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\LI_post_activity\result (20).csv
+2025-05-19 19:05:03,160 - INFO - MainThread - Read 1908 LinkedIn post entries.
+2025-05-19 19:05:03,175 - INFO - MainThread - Filtered to 622 posts within last 60 days.
+2025-05-19 19:05:03,238 - INFO - MainThread - Merged LinkedIn posts. Main df length changed from 1461 to 1461 (duplicates if any should be reviewed).
+2025-05-19 19:05:03,239 - INFO - MainThread - No prospects had matching LinkedIn posts after processing.
+2025-05-19 19:05:03,243 - INFO - MainThread - Filtered main DataFrame to 0 rows with matching LinkedIn profiles (from 1461).
+2025-05-19 19:05:03,244 - INFO - MainThread - [DEBUG] No final output rows with matching LinkedIn posts found after filtering.
+2025-05-19 19:05:03,246 - INFO - MainThread - Validating referenceableDataPoints...
+2025-05-19 19:05:03,246 - INFO - MainThread - Filtered main DataFrame to 0 rows with valid referenceableDataPoints (from 0).
+2025-05-19 19:05:03,247 - ERROR - MainThread - All rows filtered out due to missing referenceableDataPoints.
+2025-05-19 19:05:03,247 - INFO - MainThread - --- Script finished in 0:00:01.942706 ---
+2025-05-19 19:06:10,636 - INFO - MainThread - --- Starting Gemini Personalization Script ---
+2025-05-19 19:06:10,637 - INFO - MainThread - 🔍 RUNNING IN TEST MODE - Will only process 9 rows
+2025-05-19 19:06:10,903 - INFO - MainThread - Reading main input Excel file: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\categorized_personas.xlsx
+2025-05-19 19:06:12,469 - INFO - MainThread - Successfully read 1461 rows from input/categorized_personas.xlsx sheet Sheet1.
+2025-05-19 19:06:12,470 - INFO - MainThread - [DEBUG] LI_POSTS_CONFIG: {'directory': 'input/LI_post_activity', 'name': 'result (20).csv', 'sheet': 'result (20)', 'key_column_li_df': 'profileUrl', 'content_column': 'postContent', 'timestamp_column': 'postTimestamp', 'key_column_main_df': 'linkedinProfileUrl', 'max_posts_per_person': 2, 'max_post_age_days': 60}
+2025-05-19 19:06:12,471 - INFO - MainThread - [DEBUG] LI_POSTS_FILE_NAME: result (20).csv
+2025-05-19 19:06:12,471 - INFO - MainThread - [DEBUG] LINKEDIN_POSTS_FILE_PATH: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\LI_post_activity\result (20).csv
+2025-05-19 19:06:12,472 - INFO - MainThread - [DEBUG] LinkedIn posts file exists: True
+2025-05-19 19:06:12,472 - INFO - MainThread - Reading LinkedIn posts from: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\LI_post_activity\result (20).csv
+2025-05-19 19:06:12,499 - INFO - MainThread - Read 1908 LinkedIn post entries.
+2025-05-19 19:06:12,516 - INFO - MainThread - Filtered to 622 posts within last 60 days.
+2025-05-19 19:06:12,580 - INFO - MainThread - Merged LinkedIn posts. Main df length changed from 1461 to 1461 (duplicates if any should be reviewed).
+2025-05-19 19:06:12,581 - INFO - MainThread - No prospects had matching LinkedIn posts after processing.
+2025-05-19 19:06:12,585 - INFO - MainThread - Filtered main DataFrame to 0 rows with matching LinkedIn profiles (from 1461).
+2025-05-19 19:06:12,586 - INFO - MainThread - [DEBUG] No final output rows with matching LinkedIn posts found after filtering.
+2025-05-19 19:06:12,587 - INFO - MainThread - [DEBUG] Found 0 matching profile URLs between main input and LinkedIn posts.
+2025-05-19 19:06:12,588 - INFO - MainThread - Validating referenceableDataPoints...
+2025-05-19 19:06:12,588 - INFO - MainThread - Filtered main DataFrame to 0 rows with valid referenceableDataPoints (from 0).
+2025-05-19 19:06:12,589 - ERROR - MainThread - All rows filtered out due to missing referenceableDataPoints.
+2025-05-19 19:06:12,589 - INFO - MainThread - --- Script finished in 0:00:01.952197 ---
+2025-05-19 19:14:05,472 - INFO - MainThread - --- Starting Gemini Personalization Script ---
+2025-05-19 19:14:05,472 - INFO - MainThread - 🔍 RUNNING IN TEST MODE - Will only process 9 rows
+2025-05-19 19:14:05,828 - INFO - MainThread - Reading main input Excel file: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\categorized_personas.xlsx
+2025-05-19 19:14:07,401 - INFO - MainThread - Successfully read 1461 rows from input/categorized_personas.xlsx sheet Sheet1.
+2025-05-19 19:14:07,402 - INFO - MainThread - [DEBUG] LI_POSTS_CONFIG: {'directory': 'input/LI_post_activity', 'name': 'result (20).csv', 'sheet': 'result (20)', 'key_column_li_df': 'profileUrl', 'content_column': 'postContent', 'timestamp_column': 'postTimestamp', 'key_column_main_df': 'linkedinProfileUrl', 'max_posts_per_person': 2, 'max_post_age_days': 60}
+2025-05-19 19:14:07,402 - INFO - MainThread - [DEBUG] LI_POSTS_FILE_NAME: result (20).csv
+2025-05-19 19:14:07,403 - INFO - MainThread - [DEBUG] LINKEDIN_POSTS_FILE_PATH: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\LI_post_activity\result (20).csv
+2025-05-19 19:14:07,403 - INFO - MainThread - [DEBUG] LinkedIn posts file exists: True
+2025-05-19 19:14:07,404 - INFO - MainThread - Reading LinkedIn posts from: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\LI_post_activity\result (20).csv
+2025-05-19 19:14:07,433 - INFO - MainThread - Read 1908 LinkedIn post entries.
+2025-05-19 19:14:07,448 - INFO - MainThread - Filtered to 622 posts within last 60 days.
+2025-05-19 19:14:07,514 - INFO - MainThread - Merged LinkedIn posts. Main df length changed from 1461 to 1461 (duplicates if any should be reviewed).
+2025-05-19 19:14:07,515 - INFO - MainThread - No prospects had matching LinkedIn posts after processing.
+2025-05-19 19:14:07,518 - INFO - MainThread - Filtered main DataFrame to 0 rows with matching LinkedIn profiles (from 1461).
+2025-05-19 19:14:07,519 - INFO - MainThread - [DEBUG] No final output rows with matching LinkedIn posts found after filtering.
+2025-05-19 19:14:07,523 - INFO - MainThread - [DEBUG] Found 0 matching profile URLs between main input and LinkedIn posts.
+2025-05-19 19:14:07,523 - INFO - MainThread - Validating referenceableDataPoints...
+2025-05-19 19:14:07,524 - INFO - MainThread - Filtered main DataFrame to 0 rows with valid referenceableDataPoints (from 0).
+2025-05-19 19:14:07,524 - ERROR - MainThread - All rows filtered out due to missing referenceableDataPoints.
+2025-05-19 19:14:07,524 - INFO - MainThread - --- Script finished in 0:00:02.051758 ---
+2025-05-19 19:15:46,634 - INFO - MainThread - --- Starting Gemini Personalization Script ---
+2025-05-19 19:15:46,635 - INFO - MainThread - 🔍 RUNNING IN TEST MODE - Will only process 9 rows
+2025-05-19 19:15:46,907 - INFO - MainThread - Reading main input Excel file: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\categorized_personas.xlsx
+2025-05-19 19:15:48,496 - INFO - MainThread - Successfully read 1461 rows from input/categorized_personas.xlsx sheet Sheet1.
+2025-05-19 19:15:48,497 - INFO - MainThread - [DEBUG] LI_POSTS_CONFIG: {'directory': 'input/LI_post_activity', 'name': 'result (20).csv', 'sheet': 'result (20)', 'key_column_li_df': 'profileUrl', 'content_column': 'postContent', 'timestamp_column': 'postTimestamp', 'key_column_main_df': 'linkedinProfileUrl', 'max_posts_per_person': 2, 'max_post_age_days': 60}
+2025-05-19 19:15:48,498 - INFO - MainThread - [DEBUG] LI_POSTS_FILE_NAME: result (20).csv
+2025-05-19 19:15:48,498 - INFO - MainThread - [DEBUG] LINKEDIN_POSTS_FILE_PATH: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\LI_post_activity\result (20).csv
+2025-05-19 19:15:48,498 - INFO - MainThread - [DEBUG] LinkedIn posts file exists: True
+2025-05-19 19:15:48,499 - INFO - MainThread - Reading LinkedIn posts from: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\LI_post_activity\result (20).csv
+2025-05-19 19:15:48,527 - INFO - MainThread - Read 1908 LinkedIn post entries.
+2025-05-19 19:15:48,542 - INFO - MainThread - Filtered to 622 posts within last 60 days.
+2025-05-19 19:15:48,616 - INFO - MainThread - Merged LinkedIn posts. Main df length changed from 1461 to 1461 (duplicates if any should be reviewed).
+2025-05-19 19:15:48,616 - INFO - MainThread - No prospects had matching LinkedIn posts after processing.
+2025-05-19 19:15:48,620 - INFO - MainThread - Filtered main DataFrame to 0 rows with matching LinkedIn profiles (from 1461).
+2025-05-19 19:15:48,621 - INFO - MainThread - [DEBUG] No final output rows with matching LinkedIn posts found after filtering.
+2025-05-19 19:15:48,625 - INFO - MainThread - [DEBUG] Example normalised main input profile URLs: []
+2025-05-19 19:15:48,625 - INFO - MainThread - [DEBUG] Example normalised LinkedIn posts profile URLs: ['www.linkedin.com/in/gareth-griffiths-77b74831', 'www.linkedin.com/in/jamie-clarke-9766004', 'www.linkedin.com/in/fiona-francombe-b3643413', 'www.linkedin.com/in/ben-mott', 'www.linkedin.com/in/nina-whittaker-9230ab1a']
+2025-05-19 19:15:48,626 - INFO - MainThread - [DEBUG] Found 0 matching profile URLs between main input and LinkedIn posts.
+2025-05-19 19:15:48,626 - INFO - MainThread - Validating referenceableDataPoints...
+2025-05-19 19:15:48,627 - INFO - MainThread - Filtered main DataFrame to 0 rows with valid referenceableDataPoints (from 0).
+2025-05-19 19:15:48,628 - ERROR - MainThread - All rows filtered out due to missing referenceableDataPoints.
+2025-05-19 19:15:48,628 - INFO - MainThread - --- Script finished in 0:00:01.993819 ---
+2025-05-19 19:20:08,332 - INFO - MainThread - --- Starting Gemini Personalization Script ---
+2025-05-19 19:20:08,333 - INFO - MainThread - 🔍 RUNNING IN TEST MODE - Will only process 9 rows
+2025-05-19 19:20:08,604 - INFO - MainThread - Reading main input Excel file: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\categorized_personas.xlsx
+2025-05-19 19:20:10,234 - INFO - MainThread - Successfully read 1461 rows from input/categorized_personas.xlsx sheet Sheet1.
+2025-05-19 19:20:10,235 - INFO - MainThread - [DEBUG] LI_POSTS_CONFIG: {'directory': 'input/LI_post_activity', 'name': 'result (20).csv', 'sheet': 'result (20)', 'key_column_li_df': 'profileUrl', 'content_column': 'postContent', 'timestamp_column': 'postTimestamp', 'key_column_main_df': 'linkedinProfileUrl', 'max_posts_per_person': 2, 'max_post_age_days': 60}
+2025-05-19 19:20:10,236 - INFO - MainThread - [DEBUG] LI_POSTS_FILE_NAME: result (20).csv
+2025-05-19 19:20:10,236 - INFO - MainThread - [DEBUG] LINKEDIN_POSTS_FILE_PATH: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\LI_post_activity\result (20).csv
+2025-05-19 19:20:10,236 - INFO - MainThread - [DEBUG] LinkedIn posts file exists: True
+2025-05-19 19:20:10,237 - INFO - MainThread - Reading LinkedIn posts from: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\LI_post_activity\result (20).csv
+2025-05-19 19:20:10,264 - INFO - MainThread - Read 1908 LinkedIn post entries.
+2025-05-19 19:20:10,279 - INFO - MainThread - Filtered to 622 posts within last 60 days.
+2025-05-19 19:20:10,346 - INFO - MainThread - Merged LinkedIn posts. Main df length changed from 1461 to 1461 (duplicates if any should be reviewed).
+2025-05-19 19:20:10,347 - INFO - MainThread - No prospects had matching LinkedIn posts after processing.
+2025-05-19 19:20:10,350 - INFO - MainThread - Filtered main DataFrame to 0 rows with matching LinkedIn profiles (from 1461).
+2025-05-19 19:20:10,351 - INFO - MainThread - [DEBUG] No final output rows with matching LinkedIn posts found after filtering.
+2025-05-19 19:20:10,353 - INFO - MainThread - [DEBUG] Example normalised main input profile URLs: []
+2025-05-19 19:20:10,354 - INFO - MainThread - [DEBUG] Example normalised LinkedIn posts profile URLs: ['www.linkedin.com/in/cegtams', 'www.linkedin.com/in/toby-owen-b3798b64', 'www.linkedin.com/in/chrisjohnsonconsulting', 'www.linkedin.com/in/will-brown-70452950', 'www.linkedin.com/in/stephen-tattersall-88345567']
+2025-05-19 19:20:10,354 - INFO - MainThread - [DEBUG] Found 0 matching profile URLs between main input and LinkedIn posts.
+2025-05-19 19:20:10,354 - INFO - MainThread - Validating referenceableDataPoints...
+2025-05-19 19:20:10,355 - INFO - MainThread - Filtered main DataFrame to 0 rows with valid referenceableDataPoints (from 0).
+2025-05-19 19:20:10,356 - ERROR - MainThread - All rows filtered out due to missing referenceableDataPoints.
+2025-05-19 19:20:10,356 - INFO - MainThread - --- Script finished in 0:00:02.024344 ---
+2025-05-19 19:27:01,478 - INFO - MainThread - --- Starting Gemini Personalization Script ---
+2025-05-19 19:27:01,479 - INFO - MainThread - 🔍 RUNNING IN TEST MODE - Will only process 9 rows
+2025-05-19 19:27:01,763 - INFO - MainThread - Reading main input Excel file: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\categorized_personas.xlsx
+2025-05-19 19:27:03,340 - INFO - MainThread - Successfully read 1461 rows from input/categorized_personas.xlsx sheet Sheet1.
+2025-05-19 19:27:03,341 - INFO - MainThread - [DEBUG] LI_POSTS_CONFIG: {'directory': 'input/LI_post_activity', 'name': 'result (20).csv', 'sheet': 'result (20)', 'key_column_li_df': 'profileUrl', 'content_column': 'postContent', 'timestamp_column': 'postTimestamp', 'key_column_main_df': 'linkedinProfileUrl', 'max_posts_per_person': 2, 'max_post_age_days': 60}
+2025-05-19 19:27:03,342 - INFO - MainThread - [DEBUG] LI_POSTS_FILE_NAME: result (20).csv
+2025-05-19 19:27:03,342 - INFO - MainThread - [DEBUG] LINKEDIN_POSTS_FILE_PATH: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\LI_post_activity\result (20).csv
+2025-05-19 19:27:03,343 - INFO - MainThread - [DEBUG] LinkedIn posts file exists: True
+2025-05-19 19:27:03,343 - INFO - MainThread - Reading LinkedIn posts from: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\LI_post_activity\result (20).csv
+2025-05-19 19:27:03,371 - INFO - MainThread - Read 1908 LinkedIn post entries.
+2025-05-19 19:27:03,387 - INFO - MainThread - Filtered to 622 posts within last 60 days.
+2025-05-19 19:27:03,453 - INFO - MainThread - Merged LinkedIn posts. Main df length changed from 1461 to 1461 (duplicates if any should be reviewed).
+2025-05-19 19:27:03,454 - INFO - MainThread - No prospects had matching LinkedIn posts after processing.
+2025-05-19 19:27:03,458 - INFO - MainThread - Filtered main DataFrame to 0 rows with matching LinkedIn profiles (from 1461).
+2025-05-19 19:27:03,458 - INFO - MainThread - [DEBUG] No final output rows with matching LinkedIn posts found after filtering.
+2025-05-19 19:27:03,461 - INFO - MainThread - [DEBUG] Example normalised main input profile URLs: []
+2025-05-19 19:27:03,461 - INFO - MainThread - [DEBUG] Example normalised LinkedIn posts profile URLs: ['www.linkedin.com/in/melvin-dickson-aaa28a2b', 'www.linkedin.com/in/samflatman', 'www.linkedin.com/in/toby-owen-b3798b64', 'www.linkedin.com/in/ben-cobb-12342413', 'www.linkedin.com/in/preynolds9999']
+2025-05-19 19:27:03,462 - INFO - MainThread - [DEBUG] Found 0 matching profile URLs between main input and LinkedIn posts.
+2025-05-19 19:27:03,462 - INFO - MainThread - Validating referenceableDataPoints...
+2025-05-19 19:27:03,463 - INFO - MainThread - Filtered main DataFrame to 0 rows with valid referenceableDataPoints (from 0).
+2025-05-19 19:27:03,463 - ERROR - MainThread - All rows filtered out due to missing referenceableDataPoints.
+2025-05-19 19:27:03,463 - INFO - MainThread - --- Script finished in 0:00:01.984353 ---
+2025-05-19 19:28:40,288 - INFO - MainThread - --- Starting Gemini Personalization Script ---
+2025-05-19 19:28:40,288 - INFO - MainThread - 🔍 RUNNING IN TEST MODE - Will only process 9 rows
+2025-05-19 19:28:40,568 - INFO - MainThread - Reading main input Excel file: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\categorized_personas.xlsx
+2025-05-19 19:28:42,259 - INFO - MainThread - Successfully read 1461 rows from input/categorized_personas.xlsx sheet Sheet1.
+2025-05-19 19:28:42,259 - INFO - MainThread - [DEBUG] LI_POSTS_CONFIG: {'directory': 'input/LI_post_activity', 'name': 'result (20).csv', 'sheet': 'result (20)', 'key_column_li_df': 'profileUrl', 'content_column': 'postContent', 'timestamp_column': 'postTimestamp', 'key_column_main_df': 'linkedinProfileUrl', 'max_posts_per_person': 2, 'max_post_age_days': 60}
+2025-05-19 19:28:42,259 - INFO - MainThread - [DEBUG] LI_POSTS_FILE_NAME: result (20).csv
+2025-05-19 19:28:42,260 - INFO - MainThread - [DEBUG] LINKEDIN_POSTS_FILE_PATH: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\LI_post_activity\result (20).csv
+2025-05-19 19:28:42,260 - INFO - MainThread - [DEBUG] LinkedIn posts file exists: True
+2025-05-19 19:28:42,262 - INFO - MainThread - Reading LinkedIn posts from: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\LI_post_activity\result (20).csv
+2025-05-19 19:28:42,293 - INFO - MainThread - Read 1908 LinkedIn post entries.
+2025-05-19 19:28:42,308 - INFO - MainThread - Filtered to 622 posts within last 60 days.
+2025-05-19 19:28:42,383 - INFO - MainThread - Merged LinkedIn posts. Main df length changed from 1461 to 1461 (duplicates if any should be reviewed).
+2025-05-19 19:28:42,383 - INFO - MainThread - No prospects had matching LinkedIn posts after processing.
+2025-05-19 19:28:42,387 - INFO - MainThread - Filtered main DataFrame to 0 rows with matching LinkedIn profiles (from 1461).
+2025-05-19 19:28:42,389 - INFO - MainThread - [DEBUG] No final output rows with matching LinkedIn posts found after filtering.
+2025-05-19 19:28:42,393 - INFO - MainThread - [DEBUG] Example normalised main input profile URLs: []
+2025-05-19 19:28:42,393 - INFO - MainThread - [DEBUG] Example normalised LinkedIn posts profile URLs: ['www.linkedin.com/in/richard-darch-30a9a9', 'www.linkedin.com/in/geoff-stevens-67776937', 'www.linkedin.com/in/oliver-allies-9a6b9216', 'www.linkedin.com/in/andy-cullimore-a844772a', 'www.linkedin.com/in/alex-hugo-47120063']
+2025-05-19 19:28:42,394 - INFO - MainThread - [DEBUG] Found 0 matching profile URLs between main input and LinkedIn posts.
+2025-05-19 19:28:42,394 - INFO - MainThread - Validating referenceableDataPoints...
+2025-05-19 19:28:42,395 - INFO - MainThread - Filtered main DataFrame to 0 rows with valid referenceableDataPoints (from 0).
+2025-05-19 19:28:42,395 - ERROR - MainThread - All rows filtered out due to missing referenceableDataPoints.
+2025-05-19 19:28:42,396 - INFO - MainThread - --- Script finished in 0:00:02.107746 ---
+2025-05-19 19:30:53,450 - INFO - MainThread - --- Starting Gemini Personalization Script ---
+2025-05-19 19:30:53,450 - INFO - MainThread - 🔍 RUNNING IN TEST MODE - Will only process 9 rows
+2025-05-19 19:30:53,723 - INFO - MainThread - Reading main input Excel file: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\categorized_personas.xlsx
+2025-05-19 19:30:55,286 - INFO - MainThread - Successfully read 1461 rows from input/categorized_personas.xlsx sheet Sheet1.
+2025-05-19 19:30:55,286 - INFO - MainThread - [DEBUG] LI_POSTS_CONFIG: {'directory': 'input/LI_post_activity', 'name': 'result (20).csv', 'sheet': 'result (20)', 'key_column_li_df': 'profileUrl', 'content_column': 'postContent', 'timestamp_column': 'postTimestamp', 'key_column_main_df': 'linkedinProfileUrl', 'max_posts_per_person': 2, 'max_post_age_days': 60}
+2025-05-19 19:30:55,287 - INFO - MainThread - [DEBUG] LI_POSTS_FILE_NAME: result (20).csv
+2025-05-19 19:30:55,288 - INFO - MainThread - [DEBUG] LINKEDIN_POSTS_FILE_PATH: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\LI_post_activity\result (20).csv
+2025-05-19 19:30:55,288 - INFO - MainThread - [DEBUG] LinkedIn posts file exists: True
+2025-05-19 19:30:55,289 - INFO - MainThread - Reading LinkedIn posts from: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\LI_post_activity\result (20).csv
+2025-05-19 19:30:55,317 - INFO - MainThread - Read 1908 LinkedIn post entries.
+2025-05-19 19:30:55,331 - INFO - MainThread - Filtered to 622 posts within last 60 days.
+2025-05-19 19:30:55,400 - INFO - MainThread - Merged LinkedIn posts. Main df length changed from 1461 to 1461 (duplicates if any should be reviewed).
+2025-05-19 19:30:55,401 - INFO - MainThread - No prospects had matching LinkedIn posts after processing.
+2025-05-19 19:30:55,404 - INFO - MainThread - Filtered main DataFrame to 0 rows with matching LinkedIn profiles (from 1461).
+2025-05-19 19:30:55,405 - INFO - MainThread - [DEBUG] No final output rows with matching LinkedIn posts found after filtering.
+2025-05-19 19:30:55,409 - INFO - MainThread - [DEBUG] Example normalised main input profile URLs: []
+2025-05-19 19:30:55,409 - INFO - MainThread - [DEBUG] Example normalised LinkedIn posts profile URLs: ['linkedin.com/in/andy-spargo-b3979480', 'linkedin.com/in/tim-rodman-96445263', 'linkedin.com/in/sean-sargent-517614127', 'linkedin.com/in/andy-healy-82479b19', 'linkedin.com/in/andresroberts']
+2025-05-19 19:30:55,409 - INFO - MainThread - [DEBUG] Found 0 matching profile URLs between main input and LinkedIn posts.
+2025-05-19 19:30:55,410 - INFO - MainThread - Validating referenceableDataPoints...
+2025-05-19 19:30:55,411 - INFO - MainThread - Filtered main DataFrame to 0 rows with valid referenceableDataPoints (from 0).
+2025-05-19 19:30:55,411 - ERROR - MainThread - All rows filtered out due to missing referenceableDataPoints.
+2025-05-19 19:30:55,411 - INFO - MainThread - --- Script finished in 0:00:01.961336 ---
+2025-05-19 19:37:30,675 - INFO - MainThread - --- Starting Gemini Personalization Script ---
+2025-05-19 19:37:30,675 - INFO - MainThread - 🔍 RUNNING IN TEST MODE - Will only process 9 rows
+2025-05-19 19:37:30,945 - INFO - MainThread - Reading main input Excel file: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\categorized_personas.xlsx
+2025-05-19 19:37:32,482 - INFO - MainThread - Successfully read 1461 rows from input/categorized_personas.xlsx sheet Sheet1.
+2025-05-19 19:37:32,483 - INFO - MainThread - [DEBUG] LI_POSTS_CONFIG: {'directory': 'input/LI_post_activity', 'name': 'result (20).csv', 'sheet': 'result (20)', 'key_column_li_df': 'profileUrl', 'content_column': 'postContent', 'timestamp_column': 'postTimestamp', 'key_column_main_df': 'linkedinProfileUrl', 'max_posts_per_person': 2, 'max_post_age_days': 60}
+2025-05-19 19:37:32,484 - INFO - MainThread - [DEBUG] LI_POSTS_FILE_NAME: result (20).csv
+2025-05-19 19:37:32,484 - INFO - MainThread - [DEBUG] LINKEDIN_POSTS_FILE_PATH: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\LI_post_activity\result (20).csv
+2025-05-19 19:37:32,485 - INFO - MainThread - [DEBUG] LinkedIn posts file exists: True
+2025-05-19 19:37:32,485 - INFO - MainThread - Reading LinkedIn posts from: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\LI_post_activity\result (20).csv
+2025-05-19 19:37:32,518 - INFO - MainThread - Read 1908 LinkedIn post entries.
+2025-05-19 19:37:32,532 - INFO - MainThread - Filtered to 622 posts within last 60 days.
+2025-05-19 19:37:32,597 - INFO - MainThread - Merged LinkedIn posts. Main df length changed from 1461 to 1461 (duplicates if any should be reviewed).
+2025-05-19 19:37:32,598 - INFO - MainThread - No prospects had matching LinkedIn posts after processing.
+2025-05-19 19:37:32,603 - INFO - MainThread - Filtered main DataFrame to 0 rows with matching LinkedIn profiles (from 1461).
+2025-05-19 19:37:32,604 - INFO - MainThread - [DEBUG] No final output rows with matching LinkedIn posts found after filtering.
+2025-05-19 19:37:32,609 - INFO - MainThread - [DEBUG] Example normalised main input profile URLs: []
+2025-05-19 19:37:32,609 - INFO - MainThread - [DEBUG] Example normalised LinkedIn posts profile URLs: ['linkedin.com/in/tracyclark2', 'linkedin.com/in/dave-coull', 'linkedin.com/in/joe-hammond-2977a4a7', 'linkedin.com/in/susan-hamilton-b8045816', 'linkedin.com/in/ann-fiddler-04a5b716']
+2025-05-19 19:37:32,609 - INFO - MainThread - [DEBUG] Found 0 matching profile URLs between main input and LinkedIn posts.
+2025-05-19 19:37:32,610 - INFO - MainThread - [DEBUG] Main input DataFrame columns: ['first_name', 'last_name', 'full_name', 'email', 'email_status', 'title', 'company_name', 'company_url', 'company_domain', 'company_linkedin_url', 'linkedin_url', 'headline', 'country', 'state', 'city', 'estimated_num_employees', 'phone_number', 'sanitized_phone_number', 'seniority', 'industry', 'secondary_industries', 'industries', 'functions', 'departments', 'subdepartments', 'keywords', 'is_likely_to_engage', 'error', 'refreshedAt', 'companyIndustry', 'companyName', 'firstName', 'lastName', 'linkedinCompanyUrl', 'linkedinCompanySlug', 'linkedinDescription', 'linkedinFollowersCount', 'linkedinHeadline', 'linkedinIsHiringBadge', 'linkedinIsOpenToWorkBadge', 'linkedinJobDateRange', 'linkedinJobDescription', 'linkedinJobTitle', 'linkedinPreviousCompanySlug', 'linkedinPreviousJobDateRange', 'linkedinPreviousJobDescription', 'linkedinPreviousJobLocation', 'linkedinPreviousJobTitle', 'linkedinPreviousSchoolUrl', 'linkedinPreviousSchoolCompanySlug', 'linkedinPreviousSchoolDegree', 'linkedinPreviousSchoolName', 'linkedinProfileId', 'linkedinProfileSlug', 'linkedinProfileUrl', 'linkedinProfileUrn', 'linkedinSchoolUrl', 'linkedinSchoolCompanySlug', 'linkedinSchoolDegree', 'linkedinSchoolName', 'linkedinSkillsLabel', 'location', 'previousCompanyName', 'connectionDegree', 'mutualConnectionsUrl', 'connectionsUrl', 'linkedinConnectionsCount', 'linkedinJobLocation', 'linkedinSchoolDescription', 'linkedinPreviousSchoolDescription', 'linkedinSchoolDateRange', 'linkedinPreviousSchoolDateRange', 'verifiedJobTitle', 'inferredSeniority', 'inferredCompanyStage', 'individualActivitySummary', 'companyNewsSummary', 'referenceableDataPoints', 'sanitized_url', 'recentPostsContent', 'assignedPersona', 'personaReasoning', 'formatted_linkedin_posts_x', 'profileUrl', 'formatted_linkedin_posts_y', 'formatted_linkedin_posts']
+2025-05-19 19:37:32,613 - INFO - MainThread - [DEBUG] First 5 raw sanitized_url values: []
+2025-05-19 19:37:32,613 - INFO - MainThread - [DEBUG] First 5 sanitized main input profile URLs after function: []
+2025-05-19 19:37:32,613 - INFO - MainThread - Validating referenceableDataPoints...
+2025-05-19 19:37:32,614 - INFO - MainThread - Filtered main DataFrame to 0 rows with valid referenceableDataPoints (from 0).
+2025-05-19 19:37:32,614 - ERROR - MainThread - All rows filtered out due to missing referenceableDataPoints.
+2025-05-19 19:37:32,615 - INFO - MainThread - --- Script finished in 0:00:01.939249 ---
+2025-05-19 19:44:05,753 - INFO - MainThread - --- Starting Gemini Personalization Script ---
+2025-05-19 19:44:05,753 - INFO - MainThread - 🔍 RUNNING IN TEST MODE - Will only process 9 rows
+2025-05-19 19:44:06,026 - INFO - MainThread - Reading main input Excel file: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\categorized_personas.xlsx
+2025-05-19 19:44:07,619 - INFO - MainThread - Successfully read 1461 rows from input/categorized_personas.xlsx sheet Sheet1.
+2025-05-19 19:44:07,620 - INFO - MainThread - [DEBUG] LI_POSTS_CONFIG: {'directory': 'input/LI_post_activity', 'name': 'result (20).csv', 'sheet': 'result (20)', 'key_column_li_df': 'profileUrl', 'content_column': 'postContent', 'timestamp_column': 'postTimestamp', 'key_column_main_df': 'linkedinProfileUrl', 'max_posts_per_person': 2, 'max_post_age_days': 60}
+2025-05-19 19:44:07,621 - INFO - MainThread - [DEBUG] LI_POSTS_FILE_NAME: result (20).csv
+2025-05-19 19:44:07,621 - INFO - MainThread - [DEBUG] LINKEDIN_POSTS_FILE_PATH: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\LI_post_activity\result (20).csv
+2025-05-19 19:44:07,621 - INFO - MainThread - [DEBUG] LinkedIn posts file exists: True
+2025-05-19 19:44:07,622 - INFO - MainThread - Reading LinkedIn posts from: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\LI_post_activity\result (20).csv
+2025-05-19 19:44:07,651 - INFO - MainThread - Read 1908 LinkedIn post entries.
+2025-05-19 19:44:07,666 - INFO - MainThread - Filtered to 622 posts within last 60 days.
+2025-05-19 19:44:07,730 - INFO - MainThread - Merged LinkedIn posts. Main df length changed from 1461 to 1461 (duplicates if any should be reviewed).
+2025-05-19 19:44:07,731 - INFO - MainThread - No prospects had matching LinkedIn posts after processing.
+2025-05-19 19:44:07,735 - INFO - MainThread - Filtered main DataFrame to 0 rows with matching LinkedIn profiles (from 1461).
+2025-05-19 19:44:07,736 - INFO - MainThread - [DEBUG] No final output rows with matching LinkedIn posts found after filtering.
+2025-05-19 19:44:07,740 - INFO - MainThread - [DEBUG] Example normalised main input profile URLs: []
+2025-05-19 19:44:07,740 - INFO - MainThread - [DEBUG] Example normalised LinkedIn posts profile URLs: ['linkedin.com/in/steve-gain-94587a28', 'linkedin.com/in/ryan-ball-35118a54', 'linkedin.com/in/richflemmings', 'linkedin.com/in/lisa-cousins-minstf-dip-32046442', 'linkedin.com/in/fiona-francombe-b3643413']
+2025-05-19 19:44:07,741 - INFO - MainThread - [DEBUG] Found 0 matching profile URLs between main input and LinkedIn posts.
+2025-05-19 19:44:07,741 - INFO - MainThread - [DEBUG] Main input DataFrame columns: ['first_name', 'last_name', 'full_name', 'email', 'email_status', 'title', 'company_name', 'company_url', 'company_domain', 'company_linkedin_url', 'linkedin_url', 'headline', 'country', 'state', 'city', 'estimated_num_employees', 'phone_number', 'sanitized_phone_number', 'seniority', 'industry', 'secondary_industries', 'industries', 'functions', 'departments', 'subdepartments', 'keywords', 'is_likely_to_engage', 'error', 'refreshedAt', 'companyIndustry', 'companyName', 'firstName', 'lastName', 'linkedinCompanyUrl', 'linkedinCompanySlug', 'linkedinDescription', 'linkedinFollowersCount', 'linkedinHeadline', 'linkedinIsHiringBadge', 'linkedinIsOpenToWorkBadge', 'linkedinJobDateRange', 'linkedinJobDescription', 'linkedinJobTitle', 'linkedinPreviousCompanySlug', 'linkedinPreviousJobDateRange', 'linkedinPreviousJobDescription', 'linkedinPreviousJobLocation', 'linkedinPreviousJobTitle', 'linkedinPreviousSchoolUrl', 'linkedinPreviousSchoolCompanySlug', 'linkedinPreviousSchoolDegree', 'linkedinPreviousSchoolName', 'linkedinProfileId', 'linkedinProfileSlug', 'linkedinProfileUrl', 'linkedinProfileUrn', 'linkedinSchoolUrl', 'linkedinSchoolCompanySlug', 'linkedinSchoolDegree', 'linkedinSchoolName', 'linkedinSkillsLabel', 'location', 'previousCompanyName', 'connectionDegree', 'mutualConnectionsUrl', 'connectionsUrl', 'linkedinConnectionsCount', 'linkedinJobLocation', 'linkedinSchoolDescription', 'linkedinPreviousSchoolDescription', 'linkedinSchoolDateRange', 'linkedinPreviousSchoolDateRange', 'verifiedJobTitle', 'inferredSeniority', 'inferredCompanyStage', 'individualActivitySummary', 'companyNewsSummary', 'referenceableDataPoints', 'sanitized_url', 'recentPostsContent', 'assignedPersona', 'personaReasoning', 'formatted_linkedin_posts_x', 'profileUrl', 'formatted_linkedin_posts_y', 'formatted_linkedin_posts']
+2025-05-19 19:44:07,744 - INFO - MainThread - [DEBUG] First 5 raw sanitized_url values: []
+2025-05-19 19:44:07,745 - INFO - MainThread - [DEBUG] First 5 non-empty sanitized_url values: []
+2025-05-19 19:44:07,746 - INFO - MainThread - Validating referenceableDataPoints...
+2025-05-19 19:44:07,746 - INFO - MainThread - Filtered main DataFrame to 0 rows with valid referenceableDataPoints (from 0).
+2025-05-19 19:44:07,747 - ERROR - MainThread - All rows filtered out due to missing referenceableDataPoints.
+2025-05-19 19:44:07,747 - INFO - MainThread - --- Script finished in 0:00:01.993644 ---
+2025-05-20 09:47:35,596 - INFO - MainThread - --- Starting Gemini Personalization Script ---
+2025-05-20 09:47:35,794 - INFO - MainThread - 🔍 RUNNING IN TEST MODE - Will only process up to 9 rows
+2025-05-20 09:47:35,795 - INFO - MainThread - Running API diagnostics...
+2025-05-20 09:47:35,796 - INFO - MainThread - 🔍 API Debug Information:
+2025-05-20 09:47:35,797 - INFO - MainThread -   URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
+2025-05-20 09:47:35,798 - INFO - MainThread -   API Key Present: Yes
+2025-05-20 09:47:35,799 - INFO - MainThread -   API Key Suffix (last 4 chars): ...RvuA
+2025-05-20 09:47:35,799 - INFO - MainThread -   Model Name: gemini-2.0-flash
+2025-05-20 09:47:35,800 - INFO - MainThread -   Testing API connectivity to list models...
+2025-05-20 09:47:36,844 - INFO - MainThread -   API Connection: Success ✅ (47 models found)
+2025-05-20 09:47:36,845 - INFO - MainThread -   Target Model 'gemini-2.0-flash' found in available models.
+2025-05-20 09:47:36,845 - INFO - MainThread - API debug completed.
+2025-05-20 09:47:38,944 - INFO - MainThread - Reading main input Excel file: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\categorized_personas.xlsx
+2025-05-20 09:47:40,592 - INFO - MainThread - Successfully read 1461 rows from input/categorized_personas.xlsx sheet Sheet1.
+2025-05-20 09:47:40,593 - INFO - MainThread - Reading LinkedIn posts from: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\LI_post_activity\result (20).csv
+2025-05-20 09:47:40,679 - INFO - MainThread - Read 1908 LinkedIn post entries.
+2025-05-20 09:47:40,743 - INFO - MainThread - Filtered to 617 LinkedIn posts within last 60 days.
+2025-05-20 09:47:40,794 - INFO - MainThread - Aggregated posts for 202 unique normalized profiles from LinkedIn data.
+2025-05-20 09:47:40,836 - INFO - MainThread - Merged LinkedIn posts. 191 prospects in main df have formatted LinkedIn posts. Main df length is 1461.
+2025-05-20 09:47:40,836 - INFO - MainThread - Validating referenceableDataPoints presence for rows to be processed...
+2025-05-20 09:47:40,859 - INFO - MainThread - Filtered DataFrame from 1461 to 330 rows, keeping those with either valid 'referenceableDataPoints' OR actual LinkedIn post data.
+2025-05-20 09:47:40,860 - INFO - MainThread - Generating shortened company names...
+2025-05-20 09:47:40,867 - INFO - MainThread - TEST MODE: Randomly selected 9 of 330 available rows for processing.
+2025-05-20 09:47:40,868 - INFO - MainThread - Starting API calls with up to 1 workers for 9 tasks...
+2025-05-20 09:48:32,135 - INFO - MainThread - Finished processing loop. API calls attempted for 9/9 selected tasks.
+2025-05-20 09:48:32,158 - INFO - MainThread - Test mode: Saving results to c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\output\processed_leads_TEST_MODE.xlsx...
+2025-05-20 09:48:32,291 - INFO - MainThread - Results saved: 9 rows to c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\output\processed_leads_TEST_MODE.xlsx.
+2025-05-20 09:48:32,292 - INFO - MainThread - Saved data summary: 0 rows with errors (0.0%).
+2025-05-20 09:48:32,293 - INFO - MainThread - --- Script finished in 0:00:56.697298 ---
+2025-05-20 10:15:41,845 - INFO - MainThread - --- Starting Gemini Personalization Script ---
+2025-05-20 10:15:41,846 - INFO - MainThread - 🔍 RUNNING IN TEST MODE - Will only process up to 9 rows
+2025-05-20 10:15:41,846 - INFO - MainThread - Running API diagnostics...
+2025-05-20 10:15:41,846 - INFO - MainThread - 🔍 API Debug Information:
+2025-05-20 10:15:41,846 - INFO - MainThread -   URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
+2025-05-20 10:15:41,847 - INFO - MainThread -   API Key Present: Yes
+2025-05-20 10:15:41,847 - INFO - MainThread -   API Key Suffix (last 4 chars): ...RvuA
+2025-05-20 10:15:41,847 - INFO - MainThread -   Model Name: gemini-2.0-flash
+2025-05-20 10:15:41,848 - INFO - MainThread -   Testing API connectivity to list models...
+2025-05-20 10:15:42,367 - INFO - MainThread -   API Connection: Success ✅ (47 models found)
+2025-05-20 10:15:42,368 - INFO - MainThread -   Target Model 'gemini-2.0-flash' found in available models.
+2025-05-20 10:15:42,370 - INFO - MainThread - API debug completed.
+2025-05-20 10:15:42,666 - INFO - MainThread - Reading main input Excel file: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\categorized_personas.xlsx
+2025-05-20 10:15:44,151 - INFO - MainThread - Successfully read 1461 rows from input/categorized_personas.xlsx sheet Sheet1.
+2025-05-20 10:15:44,153 - INFO - MainThread - Reading LinkedIn posts from: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\LI_post_activity\result (20).csv
+2025-05-20 10:15:44,181 - INFO - MainThread - Read 1908 LinkedIn post entries.
+2025-05-20 10:15:44,218 - INFO - MainThread - Filtered to 617 LinkedIn posts within last 60 days.
+2025-05-20 10:15:44,269 - INFO - MainThread - Aggregated posts for 202 unique normalized profiles from LinkedIn data.
+2025-05-20 10:15:44,279 - INFO - MainThread - Merged LinkedIn posts. 191 prospects in main df have formatted LinkedIn posts. Main df length is 1461.
+2025-05-20 10:15:44,280 - INFO - MainThread - Validating referenceableDataPoints presence for rows to be processed...
+2025-05-20 10:15:44,285 - INFO - MainThread - Filtered DataFrame from 1461 to 330 rows, keeping those with either valid 'referenceableDataPoints' OR actual LinkedIn post data.
+2025-05-20 10:15:44,286 - INFO - MainThread - Generating shortened company names...
+2025-05-20 10:15:44,294 - INFO - MainThread - TEST MODE: Randomly selected 9 of 330 available rows for processing.
+2025-05-20 10:15:44,295 - INFO - MainThread - Starting API calls with up to 1 workers for 9 tasks...
+2025-05-20 10:16:02,151 - ERROR - ThreadPoolExecutor-0_0 - Row 71: API call failed. Error: 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyBSFUItxGK9sI8t6mv6j9B3xjb4qRJRvuA
+2025-05-20 10:16:02,152 - ERROR - ThreadPoolExecutor-0_0 - Row 71: Response status: 503. Response text: {
+  "error": {
+    "code": 503,
+    "message": "The model is overloaded. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+
+2025-05-20 10:16:02,153 - WARNING - ThreadPoolExecutor-0_0 - Server error 503. Retrying...
+2025-05-20 10:16:02,153 - INFO - ThreadPoolExecutor-0_0 - Backing off call_gemini_api(...) for 0.2s (requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyBSFUItxGK9sI8t6mv6j9B3xjb4qRJRvuA)
+2025-05-20 10:16:02,154 - WARNING - ThreadPoolExecutor-0_0 - Retrying API call for row index N/A. Attempt 1 after 0.2s due to HTTPError
+2025-05-20 10:16:36,024 - INFO - MainThread - Finished processing loop. API calls attempted for 9/9 selected tasks.
+2025-05-20 10:16:36,027 - INFO - MainThread - Test mode: Saving results to c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\output\processed_leads_TEST_MODE.xlsx...
+2025-05-20 10:16:36,032 - ERROR - MainThread - Failed to save output file to c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\output\processed_leads_TEST_MODE.xlsx: [Errno 13] Permission denied: 'c:\\Users\\rossp\\Documents\\Python Scripts\\leads_rapidly_outreach_process\\leads_rapidly_icebreaker\\output\\processed_leads_TEST_MODE.xlsx'
+Traceback (most recent call last):
+  File "c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\main.py", line 979, in main
+    df_to_save.to_excel(output_path, index=False, engine='openpyxl')
+  File "C:\Users\rossp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\pandas\core\generic.py", line 2345, in to_excel
+    formatter.write(
+  File "C:\Users\rossp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\pandas\io\formats\excel.py", line 946, in write
+    writer = ExcelWriter(  # type: ignore[abstract]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rossp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\pandas\io\excel\_openpyxl.py", line 61, in __init__
+    super().__init__(
+  File "C:\Users\rossp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\pandas\io\excel\_base.py", line 1263, in __init__
+    self._handles = get_handle(
+                    ^^^^^^^^^^^
+  File "C:\Users\rossp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\pandas\io\common.py", line 872, in get_handle
+    handle = open(handle, ioargs.mode)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'c:\\Users\\rossp\\Documents\\Python Scripts\\leads_rapidly_outreach_process\\leads_rapidly_icebreaker\\output\\processed_leads_TEST_MODE.xlsx'
+2025-05-20 10:16:36,250 - INFO - MainThread - --- Script finished in 0:00:54.404746 ---
+2025-05-20 10:17:00,274 - INFO - MainThread - --- Starting Gemini Personalization Script ---
+2025-05-20 10:17:00,274 - INFO - MainThread - 🔍 RUNNING IN TEST MODE - Will only process up to 9 rows
+2025-05-20 10:17:00,274 - INFO - MainThread - Running API diagnostics...
+2025-05-20 10:17:00,275 - INFO - MainThread - 🔍 API Debug Information:
+2025-05-20 10:17:00,275 - INFO - MainThread -   URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
+2025-05-20 10:17:00,275 - INFO - MainThread -   API Key Present: Yes
+2025-05-20 10:17:00,275 - INFO - MainThread -   API Key Suffix (last 4 chars): ...RvuA
+2025-05-20 10:17:00,275 - INFO - MainThread -   Model Name: gemini-2.0-flash
+2025-05-20 10:17:00,275 - INFO - MainThread -   Testing API connectivity to list models...
+2025-05-20 10:17:00,803 - INFO - MainThread -   API Connection: Success ✅ (47 models found)
+2025-05-20 10:17:00,804 - INFO - MainThread -   Target Model 'gemini-2.0-flash' found in available models.
+2025-05-20 10:17:00,804 - INFO - MainThread - API debug completed.
+2025-05-20 10:17:01,079 - INFO - MainThread - Reading main input Excel file: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\categorized_personas.xlsx
+2025-05-20 10:17:02,601 - INFO - MainThread - Successfully read 1461 rows from input/categorized_personas.xlsx sheet Sheet1.
+2025-05-20 10:17:02,603 - INFO - MainThread - Reading LinkedIn posts from: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\LI_post_activity\result (20).csv
+2025-05-20 10:17:02,629 - INFO - MainThread - Read 1908 LinkedIn post entries.
+2025-05-20 10:17:02,663 - INFO - MainThread - Filtered to 617 LinkedIn posts within last 60 days.
+2025-05-20 10:17:02,715 - INFO - MainThread - Aggregated posts for 202 unique normalized profiles from LinkedIn data.
+2025-05-20 10:17:02,722 - INFO - MainThread - Merged LinkedIn posts. 191 prospects in main df have formatted LinkedIn posts. Main df length is 1461.
+2025-05-20 10:17:02,723 - INFO - MainThread - Validating referenceableDataPoints presence for rows to be processed...
+2025-05-20 10:17:02,729 - INFO - MainThread - Filtered DataFrame from 1461 to 330 rows, keeping those with either valid 'referenceableDataPoints' OR actual LinkedIn post data.
+2025-05-20 10:17:02,729 - INFO - MainThread - Generating shortened company names...
+2025-05-20 10:17:02,737 - INFO - MainThread - TEST MODE: Randomly selected 9 of 330 available rows for processing.
+2025-05-20 10:17:02,738 - INFO - MainThread - Starting API calls with up to 1 workers for 9 tasks...
+2025-05-20 10:17:52,799 - INFO - MainThread - Finished processing loop. API calls attempted for 9/9 selected tasks.
+2025-05-20 10:17:52,802 - INFO - MainThread - Test mode: Saving results to c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\output\processed_leads_TEST_MODE.xlsx...
+2025-05-20 10:17:52,852 - INFO - MainThread - Results saved: 9 rows to c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\output\processed_leads_TEST_MODE.xlsx.
+2025-05-20 10:17:52,853 - INFO - MainThread - Saved data summary: 0 rows with errors (0.0%).
+2025-05-20 10:17:52,853 - INFO - MainThread - --- Script finished in 0:00:52.579496 ---
+2025-05-20 10:26:32,285 - INFO - MainThread - --- Starting Gemini Personalization Script ---
+2025-05-20 10:26:32,286 - INFO - MainThread - Running API diagnostics...
+2025-05-20 10:26:32,286 - INFO - MainThread - 🔍 API Debug Information:
+2025-05-20 10:26:32,286 - INFO - MainThread -   URL: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
+2025-05-20 10:26:32,286 - INFO - MainThread -   API Key Present: Yes
+2025-05-20 10:26:32,286 - INFO - MainThread -   API Key Suffix (last 4 chars): ...RvuA
+2025-05-20 10:26:32,287 - INFO - MainThread -   Model Name: gemini-2.0-flash
+2025-05-20 10:26:32,287 - INFO - MainThread -   Testing API connectivity to list models...
+2025-05-20 10:26:32,827 - INFO - MainThread -   API Connection: Success ✅ (47 models found)
+2025-05-20 10:26:32,827 - INFO - MainThread -   Target Model 'gemini-2.0-flash' found in available models.
+2025-05-20 10:26:32,827 - INFO - MainThread - API debug completed.
+2025-05-20 10:26:33,101 - INFO - MainThread - Reading main input Excel file: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\categorized_personas.xlsx
+2025-05-20 10:26:34,587 - INFO - MainThread - Successfully read 1461 rows from input/categorized_personas.xlsx sheet Sheet1.
+2025-05-20 10:26:34,588 - INFO - MainThread - Reading LinkedIn posts from: c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\input\LI_post_activity\result (20).csv
+2025-05-20 10:26:34,614 - INFO - MainThread - Read 1908 LinkedIn post entries.
+2025-05-20 10:26:34,648 - INFO - MainThread - Filtered to 617 LinkedIn posts within last 60 days.
+2025-05-20 10:26:34,698 - INFO - MainThread - Aggregated posts for 202 unique normalized profiles from LinkedIn data.
+2025-05-20 10:26:34,703 - INFO - MainThread - Merged LinkedIn posts. 191 prospects in main df have formatted LinkedIn posts. Main df length is 1461.
+2025-05-20 10:26:34,705 - INFO - MainThread - Validating referenceableDataPoints presence for rows to be processed...
+2025-05-20 10:26:34,710 - INFO - MainThread - Filtered DataFrame from 1461 to 330 rows, keeping those with either valid 'referenceableDataPoints' OR actual LinkedIn post data.
+2025-05-20 10:26:34,711 - INFO - MainThread - Generating shortened company names...
+2025-05-20 10:26:34,728 - INFO - MainThread - Starting API calls with up to 1 workers for 330 tasks...
+2025-05-20 10:57:21,826 - INFO - MainThread - Finished processing loop. API calls attempted for 330/330 selected tasks.
+2025-05-20 10:57:21,840 - INFO - MainThread - Saving results to c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\output\processed_leads.xlsx...
+2025-05-20 10:57:22,357 - INFO - MainThread - Results saved: 330 rows to c:\Users\rossp\Documents\Python Scripts\leads_rapidly_outreach_process\leads_rapidly_icebreaker\output\processed_leads.xlsx.
+2025-05-20 10:57:22,358 - INFO - MainThread - Saved data summary: 0 rows with errors (0.0%).
+2025-05-20 10:57:22,359 - INFO - MainThread - --- Script finished in 0:30:50.073323 ---
